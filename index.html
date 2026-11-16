@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Palestra EPSO AD5</title>
+<meta name="description" content="Prove a tempo per il concorso EPSO per amministratori AD5 (EPSO/AD/427/26): ragionamento verbale, numerico e astratto, conoscenza dell'UE, competenze digitali e prova scritta, con spiegazioni e fonti. Senza account: i risultati restano nel tuo browser.">
+<link rel="canonical" href="https://nerln.github.io/palestra-epso/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Palestra EPSO AD5">
+<meta property="og:description" content="Prove a tempo per il concorso EPSO per amministratori AD5 (EPSO/AD/427/26): ragionamento verbale, numerico e astratto, conoscenza dell'UE, competenze digitali e prova scritta, con spiegazioni e fonti. Senza account: i risultati restano nel tuo browser.">
+<meta property="og:url" content="https://nerln.github.io/palestra-epso/">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#F3F4F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1321" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='13' fill='%232343A6'/%3E%3Cg fill='%23F2C230'%3E%3Ccircle cx='13' cy='5.5' r='1.4'/%3E%3Ccircle cx='20.5' cy='13' r='1.4'/%3E%3Ccircle cx='13' cy='20.5' r='1.4'/%3E%3Ccircle cx='5.5' cy='13' r='1.4'/%3E%3Ccircle cx='18.3' cy='7.7' r='1.4'/%3E%3Ccircle cx='18.3' cy='18.3' r='1.4'/%3E%3Ccircle cx='7.7' cy='18.3' r='1.4'/%3E%3Ccircle cx='7.7' cy='7.7' r='1.4'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root { color-scheme: light; box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body { margin: 0; padding: 0; }
+img { max-width: 100%; }
+[hidden]:not([hidden=until-found i]) { display: none !important; }
+@font-face { font-family: 'Literata'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/literata-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Literata'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/literata-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Public Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/public-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Public Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/public-sans-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+</style>
+<style>
+/* Layout: una colonna sobria da documento istituzionale; durante le prove la pagina diventa la schermata d'esame, con barra fissa e riepilogo a lato */
+:root {
+  --bg: #F3F4F8; --surface: #FFFFFF; --sunk: #EBEDF3; --ink: #151B2C; --muted: #576078; --line: #D6DAE5;
+  --accent: #2343A6; --accent-ink: #FFFFFF; --accent-soft: #E4E9F8; --gold: #B98A00; --gold-soft: #FBF2D3;
+  --ok: #1B6E45; --ok-soft: #E0F1E7; --bad: #AA2A22; --bad-soft: #FAE4E1; --mid: #9298AB;
+  --serif: 'Literata', Georgia, 'Times New Roman', serif;
+  --sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0E1321; --surface: #161C2D; --sunk: #1C2337; --ink: #E6E9F2; --muted: #9AA2BA; --line: #2C3451;
+  --accent: #8AA4FF; --accent-ink: #0E1321; --accent-soft: #1F2950; --gold: #EFC544; --gold-soft: #3A3219;
+  --ok: #63C794; --ok-soft: #16301F; --bad: #FF9087; --bad-soft: #3B1C1A; --mid: #6A718A; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0E1321; --surface: #161C2D; --sunk: #1C2337; --ink: #E6E9F2; --muted: #9AA2BA; --line: #2C3451;
+  --accent: #8AA4FF; --accent-ink: #0E1321; --accent-soft: #1F2950; --gold: #EFC544; --gold-soft: #3A3219;
+  --ok: #63C794; --ok-soft: #16301F; --bad: #FF9087; --bad-soft: #3B1C1A; --mid: #6A718A; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; }
+h1 { font-size: 1.85rem; } h2 { font-size: 1.3rem; } h3 { font-size: 1.05rem; }
+p { margin: 0; }
+a { color: var(--accent); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; }
+.eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.muted { color: var(--muted); }
+.n, .num { font-variant-numeric: tabular-nums; }
+
+/* testata */
+.top { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
+.top .wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 1.05rem; margin-right: auto; }
+.brand svg { flex: none; }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+.tabs button { border: 0; background: none; padding: 7px 11px; border-radius: 8px; cursor: pointer; color: var(--muted); font-weight: 500; }
+.tabs button:hover { background: var(--sunk); color: var(--ink); }
+.tabs button[aria-current="page"] { background: var(--accent-soft); color: var(--accent); }
+
+main { padding-block: 24px 64px; }
+main.exam-mode { padding-block: 0; }
+.stack { display: grid; gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; display: grid; gap: 12px; min-width: 0; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+/* bottoni */
+.btn { border: 1px solid var(--line); background: var(--surface); padding: 9px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.92rem; }
+.btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.btn:disabled { opacity: 0.45; cursor: default; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover:not(:disabled) { filter: brightness(1.08); color: var(--accent-ink); }
+.btn.ghost { border-color: transparent; background: none; color: var(--muted); font-weight: 500; }
+.btn.wide { width: 100%; }
+.btn.flag.on { border-color: var(--gold); background: var(--gold-soft); color: var(--ink); }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* oggi */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: end; }
+.hero h1 { font-size: 2.1rem; }
+.hero .sub { color: var(--muted); max-width: 60ch; margin-top: 8px; }
+.count-box { text-align: right; }
+.count-box .big { display: block; font-family: var(--serif); font-size: 3.4rem; font-weight: 700; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.count-box .lbl { color: var(--muted); font-size: 0.88rem; }
+.today { border-left: 4px solid var(--gold); }
+.today .when { font-weight: 600; }
+.start-full { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--accent-soft); border-color: transparent; }
+.start-full p { color: var(--muted); }
+.sec-card h3 { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.sec-card h3 span { font-family: var(--sans); font-size: 0.85rem; font-weight: 500; color: var(--muted); }
+.facts { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.facts li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+.facts li:first-child { border-top: 0; padding-top: 0; }
+.facts b { font-weight: 600; }
+.check { display: grid; gap: 8px; }
+.check label { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: start; cursor: pointer; }
+.check input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--accent); }
+.check input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--mid); }
+.tips h3 { margin-bottom: 4px; }
+.tips ul, .plain { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.simple { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+table.simple th, table.simple td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.simple th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+table.simple td.n, table.simple th.n { text-align: right; }
+tr.is-today td { background: var(--gold-soft); }
+.pill { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: var(--sunk); color: var(--muted); white-space: nowrap; }
+.pill.ok { background: var(--ok-soft); color: var(--ok); } .pill.bad { background: var(--bad-soft); color: var(--bad); } .pill.gold { background: var(--gold-soft); color: var(--ink); }
+.src { font-size: 0.82rem; color: var(--muted); }
+
+/* esame */
+.exam-bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6; background: var(--surface); border-bottom: 1px solid var(--line); }
+.exam-bar .wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 10px; }
+.eb-title { margin-right: auto; min-width: 0; }
+.eb-title h1 { font-size: 1.15rem; }
+.eb-tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tool { border: 1px solid var(--line); background: var(--surface); padding: 6px 10px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 500; }
+.tool[aria-expanded="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.timer-box { display: grid; justify-items: end; line-height: 1.1; min-width: 5.5rem; }
+.timer { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.timer[data-state="warn"] { color: var(--gold); } .timer[data-state="last"] { color: var(--bad); }
+.pace { font-size: 0.72rem; color: var(--muted); }
+.exam-grid { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 20px; align-items: start; padding-block: 20px 64px; }
+.qcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; display: grid; gap: 16px; min-width: 0; }
+.qnum { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+.passage { font-family: var(--serif); font-size: 1.04rem; line-height: 1.7; max-width: 68ch; }
+.qtext { font-weight: 600; }
+.opts { display: grid; gap: 8px; }
+.opt { display: grid; grid-template-columns: 1.9rem minmax(0, 1fr); gap: 10px; align-items: start; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 9px; padding: 10px 12px; cursor: pointer; }
+button.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt .let { display: grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--sunk); font-weight: 700; font-size: 0.85rem; }
+.opt .otext { padding-top: 3px; min-width: 0; }
+.opt.sel { border-color: var(--accent); background: var(--accent-soft); }
+.opt.sel .let { background: var(--accent); color: var(--accent-ink); }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+.opt.ok .let { background: var(--ok); color: var(--surface); }
+.opt.ko { border-color: var(--bad); background: var(--bad-soft); }
+.opt.ko .let { background: var(--bad); color: var(--surface); }
+.opt:disabled { cursor: default; }
+.opts.figs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.opts.figs .opt { grid-template-columns: 1fr; justify-items: center; padding: 8px; gap: 6px; }
+.opts.figs .opt .otext { padding: 0; width: 100%; }
+.series { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.fig { width: 100%; height: auto; display: block; max-width: 100%; }
+.fig-q { aspect-ratio: 1; border: 2px dashed var(--line); border-radius: 6px; display: grid; place-items: center; font-family: var(--serif); font-size: 2rem; color: var(--muted); }
+.fig-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.st { stroke: var(--ink); stroke-width: 2.6; stroke-linejoin: round; }
+.f-vuoto { fill: var(--surface); } .f-grigio { fill: var(--mid); } .f-nero { fill: var(--ink); }
+table.data { border-collapse: collapse; font-size: 0.88rem; min-width: 100%; font-variant-numeric: tabular-nums; }
+table.data caption { text-align: left; font-weight: 600; padding-bottom: 8px; font-size: 0.95rem; }
+table.data th, table.data td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: bottom; }
+table.data thead th { font-size: 0.78rem; font-weight: 600; color: var(--muted); background: var(--sunk); line-height: 1.3; }
+table.data .n { text-align: right; white-space: nowrap; }
+table.data thead th.n { white-space: normal; }
+table.data tbody th { font-weight: 500; white-space: nowrap; }
+.u { font-weight: 400; }
+.tbl-note { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
+.feedback { border-radius: 9px; padding: 12px 14px; font-size: 0.95rem; }
+.feedback.good { background: var(--ok-soft); } .feedback.bad { background: var(--bad-soft); }
+.qnav { display: flex; gap: 8px; justify-content: space-between; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; }
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 12px; }
+.side-h { font-weight: 600; }
+.cells { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.cell { aspect-ratio: 1; border: 1.5px solid var(--line); background: var(--surface); border-radius: 7px; cursor: pointer; font-size: 0.85rem; font-weight: 600; font-variant-numeric: tabular-nums; position: relative; }
+.cell.done { background: var(--accent-soft); border-color: var(--accent-soft); color: var(--accent); }
+.cell.flagged::after { content: ''; position: absolute; top: 3px; right: 3px; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+.cell.cur { border-color: var(--ink); }
+.cell.good { background: var(--ok-soft); border-color: var(--ok-soft); color: var(--ok); }
+.cell.bad { background: var(--bad-soft); border-color: var(--bad-soft); color: var(--bad); }
+.legend { font-size: 0.78rem; color: var(--muted); display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; background: var(--accent-soft); }
+.sw.flagged { background: var(--gold); border-radius: 50%; }
+.count { font-size: 0.85rem; color: var(--muted); }
+.confirm { background: var(--gold-soft); border-radius: 8px; padding: 10px 12px; display: grid; gap: 8px; font-size: 0.9rem; }
+.panel { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(19rem, calc(100vw - 32px)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); box-shadow: 0 12px 32px rgba(10, 16, 40, 0.18); padding: 12px; display: grid; gap: 8px; z-index: 8; }
+#p-notes { right: auto; left: max(16px, env(safe-area-inset-left, 0px)); }
+.panel-head { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.9rem; }
+.x { border: 0; background: none; cursor: pointer; font-size: 1.3rem; line-height: 1; color: var(--muted); padding: 2px 6px; }
+.calc-in, .panel textarea { width: 100%; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); padding: 8px 10px; font: inherit; }
+.calc-in { text-align: right; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.calc-out { text-align: right; font-size: 1.35rem; font-weight: 700; font-variant-numeric: tabular-nums; min-height: 1.8rem; overflow-wrap: anywhere; }
+.keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.keys button { border: 1px solid var(--line); background: var(--sunk); border-radius: 7px; padding: 9px 0; cursor: pointer; font-weight: 600; font-variant-numeric: tabular-nums; }
+.keys button:hover { border-color: var(--accent); }
+.keys .eq { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* tra un test e l'altro, e risultati */
+.between { max-width: 40rem; margin: 10vh auto 0; display: grid; gap: 14px; }
+.score-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.score .big { font-family: var(--serif); font-size: 2.4rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.score .big small { font-size: 1.1rem; color: var(--muted); font-weight: 400; }
+.bar { height: 8px; border-radius: 99px; background: var(--sunk); overflow: hidden; position: relative; }
+.bar i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.bar b { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); }
+.verdict { border-radius: var(--r); padding: 16px 18px; display: grid; gap: 6px; }
+.verdict.good { background: var(--ok-soft); } .verdict.bad { background: var(--bad-soft); } .verdict.neutral { background: var(--accent-soft); }
+details.rev { border: 1px solid var(--line); border-radius: 9px; background: var(--surface); }
+details.rev summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 2rem auto minmax(0, 1fr); gap: 10px; align-items: center; padding: 10px 12px; }
+details.rev summary::-webkit-details-marker { display: none; }
+details.rev .rn { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--muted); }
+details.rev .rq { color: var(--muted); font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rev-body { padding: 4px 14px 16px; display: grid; gap: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
+.why { background: var(--sunk); border-radius: 8px; padding: 10px 12px; font-size: 0.93rem; }
+.revlist { display: grid; gap: 8px; }
+textarea.story { width: 100%; min-height: 6.5rem; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); padding: 10px; font: inherit; resize: vertical; }
+.qlist { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.qlist li { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 2px; }
+.qlist li:first-child { border-top: 0; padding-top: 0; }
+.qlist .hint { color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 760px) {
+  .exam-grid { grid-template-columns: minmax(0, 1fr); }
+  .side { position: static; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .count-box { text-align: left; }
+  .series { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .opts.figs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cells { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+  .facts li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .qcard { padding: 16px; }
+  h1, .hero h1 { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: no-preference) { .opt, .btn, .cell { transition: border-color .12s, background-color .12s; } }
+
+/* fase 2 */
+.wrow { display: grid; grid-template-columns: minmax(9rem, 1.1fr) minmax(0, 2fr) 4.6rem; gap: 12px; align-items: center; padding-top: 12px; border-top: 1px solid var(--line); }
+.wrow:first-child { border-top: 0; padding-top: 0; }
+.wrow .lab b { display: block; }
+.wrow .lab span { font-size: 0.82rem; color: var(--muted); }
+.wrow .pts { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.wrow .pts small { display: block; font-weight: 400; font-size: 0.75rem; color: var(--muted); }
+.bar.tall { height: 12px; overflow: visible; }
+.bar.tall i { border-radius: 99px; }
+.bar i.low { background: var(--bad); } .bar i.midc { background: var(--gold); } .bar i.hi { background: var(--ok); }
+.totale { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.totale .big { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.totale .big small { font-size: 1.1rem; color: var(--muted); font-weight: 400; }
+.inl { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.inl label { font-weight: 500; }
+.inl input { border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--ink); padding: 6px 8px; font: inherit; width: 5rem; }
+.inl input[type="date"] { width: auto; }
+.test-card .last { font-family: var(--serif); font-size: 1.9rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.test-card .last small { font-size: 1rem; color: var(--muted); font-weight: 400; }
+.area-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(4rem, 1fr) 3.4rem auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+.area-row:first-child { border-top: 0; }
+.area-row .pc { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.btn.small { padding: 5px 10px; font-size: 0.82rem; }
+.write-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; padding-block: 20px 64px; }
+.brief { font-family: var(--serif); font-size: 1rem; line-height: 1.65; white-space: pre-line; }
+.task { background: var(--accent-soft); border-radius: 8px; padding: 12px 14px; }
+textarea.essay { width: 100%; min-height: 28rem; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); padding: 14px; font: inherit; font-size: 1rem; line-height: 1.6; resize: vertical; }
+.essay-read { white-space: pre-wrap; font-family: var(--serif); line-height: 1.65; background: var(--sunk); border-radius: 8px; padding: 12px 14px; }
+.crit { display: grid; gap: 6px; padding-top: 12px; border-top: 1px solid var(--line); }
+.crit:first-child { border-top: 0; padding-top: 0; }
+.crit-h { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; font-weight: 600; }
+.crit-h span { font-variant-numeric: tabular-nums; }
+.lev { display: grid; gap: 6px; }
+.lev label { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px; align-items: start; font-size: 0.92rem; cursor: pointer; }
+.lev input { margin-top: 3px; accent-color: var(--accent); }
+.note { background: var(--gold-soft); border-radius: 8px; padding: 10px 12px; font-size: 0.92rem; }
+.wc { font-variant-numeric: tabular-nums; font-size: 0.9rem; color: var(--muted); }
+@media (max-width: 760px) {
+  .write-grid { grid-template-columns: minmax(0, 1fr); }
+  .wrow { grid-template-columns: minmax(0, 1fr) 4.6rem; }
+  .wrow .bar { grid-column: 1 / -1; order: 3; }
+  .area-row { grid-template-columns: minmax(0, 1fr) 3.4rem auto; }
+  .area-row .bar { display: none; }
+  textarea.essay { min-height: 18rem; }
+}
+
+/* le etichette piccole restano in minuscolo normale: niente maiuscoletto spaziato */
+.eyebrow, table.simple th { text-transform: none; letter-spacing: 0; }
+.eyebrow { font-size: 0.82rem; }
+</style>
+<style>
+.foot { border-top: 1px solid var(--line); margin-top: 48px; color: var(--muted); font-size: 0.88rem; }
+.foot .wrap { padding-block: 22px 40px; display: grid; gap: 8px; }
+.foot p { margin: 0; max-width: 72ch; }
+.foot a { color: inherit; }
+header.top[hidden] ~ .foot { display: none; }
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="12" style="fill:var(--accent)"/><g style="fill:var(--gold)"><circle cx="13" cy="5.5" r="1.3"/><circle cx="20.5" cy="13" r="1.3"/><circle cx="13" cy="20.5" r="1.3"/><circle cx="5.5" cy="13" r="1.3"/><circle cx="18.3" cy="7.7" r="1.3"/><circle cx="18.3" cy="18.3" r="1.3"/><circle cx="7.7" cy="18.3" r="1.3"/><circle cx="7.7" cy="7.7" r="1.3"/></g></svg>
+      Palestra EPSO AD5
+    </div>
+    <nav class="tabs" aria-label="Sezioni">
+      <button data-act="tab" data-v="fase2">Fase 2</button>
+      <button data-act="tab" data-v="oggi">Parte 1</button>
+      <button data-act="tab" data-v="piano">Piano</button>
+      <button data-act="tab" data-v="regole">Il giorno del test</button>
+      <button data-act="tab" data-v="dopo">Lingue e colloqui</button>
+    </nav>
+  </div>
+</header>
+<main id="app" class="wrap"></main>
+<footer class="foot"><div class="wrap">
+  <p>Progetto personale e non ufficiale, senza legami con EPSO né con le istituzioni dell'Unione europea. Le domande non vengono da EPSO: sono scritte e ricontrollate con l'aiuto dell'IA sulle fonti citate in ogni spiegazione, e possono contenere errori. Fanno fede il bando e le fonti ufficiali.</p>
+  <p>Niente account e niente cookie: risultati e bozze restano in questo browser. <a href="https://github.com/nerln/palestra-epso">Codice e segnalazioni su GitHub</a> · <a href="https://nerln.github.io/">Eugenio Nerelli</a></p>
+</div></footer>
+
+<script src="verbale.js"></script>
+<script src="motore.js"></script>
+<script src="ue.js"></script>
+<script src="digitale.js"></script>
+<script src="scritta.js"></script>
+<script>
+(function () {
+  'use strict';
+  const M = window.MOTORE, BANK = window.VERBALE;
+  const app = document.getElementById('app'), topBar = document.getElementById('top');
+  const LET = 'ABCDE';
+  let touch = () => {}; // la Fase 2 lo sostituisce per salvare anche sull'account
+  function localSet(k, v) { try { if (v == null) localStorage.removeItem('epso-ad5:' + k); else localStorage.setItem('epso-ad5:' + k, JSON.stringify(v)); } catch (e) { /* senza memoria locale si lavora lo stesso */ } }
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('epso-ad5:' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { localSet(k, v); touch(k); }
+  };
+  const SEZ = {
+    verbal: { t: 'Ragionamento verbale', short: 'Verbale', n: 20, min: 35, soglia: 10 },
+    num: { t: 'Ragionamento numerico', short: 'Numerico', n: 10, min: 20 },
+    abs: { t: 'Ragionamento astratto', short: 'Astratto', n: 10, min: 10 },
+    ue: { t: 'Conoscenza dell\'UE', short: 'Conoscenza UE', n: 30, min: 40, soglia: 15 },
+    dig: { t: 'Competenze digitali', short: 'Digitale', n: 40, min: 30, soglia: 20 }
+  };
+  const TIPI = { pct: 'Variazione percentuale', share: 'Quota sul totale', percap: 'Valore per abitante', proj: 'Proiezione', maxpct: 'Confronto fra paesi',
+    combo: 'Due variazioni insieme', rdRatio: 'Rapporto ricavato', rdGov: 'Catena di percentuali', rdPop: 'Grandezza ricavata', rdPat: 'Grandezza ricavata in due passi',
+    rdState: 'Quota di una spesa', pp: 'Punti contro percentuale', fx: 'Tassi di cambio' };
+  const BANDO = 'https://selection.eu-careers.europa.eu/system/files/2026-07/Notice-of-open-competition-EPSO-AD-427-26_consolidated-version.pdf';
+  const ESEMPI = 'https://eu-careers.europa.eu/en/accessible-version-sample-tests-ad';
+  const mmss = s => { s = Math.max(0, Math.round(s)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  const PIANO = [
+    ['2026-10-19', 'Inizio', 'Leggi questa pagina e «Il giorno del test». Prova dieci domande di verbale con le spiegazioni per prendere confidenza.', [['practice', 'verbal']]],
+    ['2026-10-20', 'Punto di partenza', 'Controllo tecnico su TAO (apre alle 9:00), orario della tua sessione, allegati e lingue nel portale SCP. Poi una simulazione completa senza prepararti: è la tua base.', [['full']]],
+    ['2026-10-21', 'Tecnica', 'Verbale con spiegazioni: leggile anche quando hai risposto giusto. Poi astratto con spiegazioni.', [['practice', 'verbal'], ['practice', 'abs']]],
+    ['2026-10-22', 'Tecnica', 'Numerico con spiegazioni. Ripassa la base delle percentuali, i punti percentuali e le catene di rapporti.', [['practice', 'num']]],
+    ['2026-10-23', 'Tempo', 'Verbale cronometrato (20 domande in 35 minuti), poi astratto cronometrato.', [['timed', 'verbal'], ['timed', 'abs']]],
+    ['2026-10-24', 'Tempo', 'Numerico cronometrato. Rileggi gli errori della settimana.', [['timed', 'num']]],
+    ['2026-10-25', 'Riposo', 'Riposo. Se ti va, dieci domande di verbale con le spiegazioni.', [['practice', 'verbal']]],
+    ['2026-10-26', 'Velocità', 'Simulazione completa. Annota in quale test ti manca tempo.', [['full']]],
+    ['2026-10-27', 'Velocità', 'Verbale cronometrato, poi astratto cronometrato.', [['timed', 'verbal'], ['timed', 'abs']]],
+    ['2026-10-28', 'Velocità', 'Due numerici cronometrati di fila.', [['timed', 'num']]],
+    ['2026-10-29', 'Velocità', 'Verbale cronometrato, poi con le spiegazioni il test in cui vai peggio.', [['timed', 'verbal'], ['practice', 'abs'], ['practice', 'num']]],
+    ['2026-10-30', 'Velocità', 'Simulazione completa.', [['full']]],
+    ['2026-10-31', 'Ripasso', 'Test di esempio ufficiali di EPSO (verbale e numerico) e ripasso degli errori.', []],
+    ['2026-11-01', 'Riposo', 'Riposo.', []],
+    ['2026-11-02', 'Condizioni vere', 'Simulazione completa alla stessa ora della tua sessione, senza telefono né carta.', [['full']]],
+    ['2026-11-03', 'Condizioni vere', 'Verbale cronometrato, poi astratto cronometrato.', [['timed', 'verbal'], ['timed', 'abs']]],
+    ['2026-11-04', 'Condizioni vere', 'Simulazione completa alla stessa ora della sessione.', [['full']]],
+    ['2026-11-05', 'Prova generale', 'Controllo tecnico su TAO, se non l\'hai ancora fatto: scade domani alle 11:59 e si fa una volta sola. Poi prova una sessione pubblica di TAO (Public Sessions, nella pagina di accesso) per vedere la schermata vera.', [['timed', 'verbal']]],
+    ['2026-11-06', 'Leggero', 'Prova la <a href="https://epso.prod.gcp-eu.taocloud.org/public-sessions" target="_blank" rel="noopener">sessione pubblica di TAO</a> in italiano: è il test di esempio con la schermata vera, senza Proctorio.', [['timed', 'verbal']]],
+    ['2026-11-07', 'Leggero', 'Dieci domande di verbale con le spiegazioni.', [['practice', 'verbal']]],
+    ['2026-11-08', 'Riposo', 'Riposo e sonno regolare.', []],
+    ['2026-11-09', 'Settimana dei test', 'Dal 9 al 13 novembre. Nei giorni che precedono la tua sessione, solo verbale leggero.', [['practice', 'verbal']]]
+  ];
+  const CHECK = [
+    ['tao', 'Fai il controllo tecnico obbligatorio su TAO: dal 20/10 alle 9:00 al 06/11 alle 11:59, ora di Bruxelles. Si fa una volta sola, quindi preparati prima di cliccare Start. Senza, ogni reclamo tecnico viene respinto.'],
+    ['ora', 'Guarda su TAO data e ora della tua sessione.'],
+    ['scp', 'Nel portale SCP, in My submitted applications, controlla che ogni voce della candidatura abbia il suo allegato e leggi la lingua 1 e la lingua 2.'],
+    ['pc', 'Computer personale con diritti di amministratore (non aziendale), Chrome o Edge, estensione Proctorio, webcam e microfono.'],
+    ['doc', 'Documento d\'identità valido, con nome e foto sullo stesso lato.'],
+    ['stanza', 'Una stanza in cui sarai da solo e una scrivania sgombra: niente telefono, carta, penna o cuffie.']
+  ];
+
+  let view = store.get('tab', 'oggi');
+  if (!['oggi', 'piano', 'regole', 'dopo', 'fase2', 'scritta'].includes(view)) view = 'oggi';
+  let EX = null;
+
+  // ---------- date ----------
+  const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const oggi = () => iso(new Date());
+  // finita la Parte 1, la pagina si apre sulla Fase 2 (una volta sola: poi vale l'ultima scheda aperta)
+  if (!store.get('vistaFase2', false) && oggi() > '2026-11-13') { view = 'fase2'; store.set('vistaFase2', true); store.set('tab', 'fase2'); }
+  function giorniAlTest() { const n = new Date(); return Math.round((new Date(2026, 10, 9) - new Date(n.getFullYear(), n.getMonth(), n.getDate())) / 86400000); }
+  const GG = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'], MM = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'];
+  function dataBreve(s) { const [y, m, d] = s.split('-').map(Number); const dt = new Date(y, m - 1, d); return GG[dt.getDay()] + ' ' + d + ' ' + MM[m - 1]; }
+  function etichetta(a) {
+    if (a[0] === 'full') return 'Simulazione completa';
+    return SEZ[a[1]].short + (a[0] === 'timed' ? ' cronometrato' : ' con spiegazioni');
+  }
+  const startBtn = (a, primary) => '<button class="btn' + (primary ? ' primary' : '') + '" data-act="start" data-mode="' + a[0] + '" data-sec="' + (a[1] || '') + '">' + etichetta(a) + '</button>';
+
+  // ---------- viste ----------
+  const VIEWS = {};
+  VIEWS.oggi = function () {
+    const g = giorniAlTest();
+    const cnt = g > 0 ? '<span class="big">' + g + '</span><span class="lbl">' + (g === 1 ? 'giorno' : 'giorni') + ' al 9 novembre</span>'
+      : g >= -4 ? '<span class="big">Ora</span><span class="lbl">è la settimana dei test</span>' : '<span class="big">Fatto</span><span class="lbl">la Parte 1 è conclusa</span>';
+    const t = oggi();
+    let row = PIANO.find(p => p[0] === t);
+    if (!row && t > PIANO[PIANO.length - 1][0]) row = PIANO[PIANO.length - 1];
+    if (!row && t < PIANO[0][0]) row = PIANO[0];
+    const chk = store.get('check', {});
+    const hist = store.get('storico', []);
+    const sec = k => {
+      const c = SEZ[k];
+      return '<div class="card sec-card"><h3>' + c.t.replace('Ragionamento ', '').replace(/^./, x => x.toUpperCase()) + ' <span>' + c.n + ' domande · ' + c.min + ' min</span></h3>' +
+        '<p class="muted">' + ({ verbal: 'Un testo breve e quattro affermazioni: una sola segue dal testo.', num: 'Tabelle con colonne in più, calcoli a catena, cinque opzioni in ordine crescente.', abs: 'Cinque figure in serie: trova la sesta fra cinque opzioni.' })[k] + '</p>' +
+        '<div class="row">' + startBtn(['timed', k], true) + startBtn(['practice', k]) + '</div></div>';
+    };
+    return '<div class="stack">' +
+      '<section class="hero"><div><p class="eyebrow">EPSO/AD/427/26 · Graduate Administrators AD5</p><h1>Test di ragionamento, Parte 1</h1>' +
+      '<p class="sub">Verbale, numerico e astratto in un\'unica sessione online, nella settimana dal 9 al 13 novembre 2026. L\'ora esatta della tua sessione è su TAO.</p></div>' +
+      '<div class="count-box">' + cnt + '</div></section>' +
+      (row ? '<section class="card today"><p class="eyebrow">Oggi nel piano · ' + dataBreve(row[0]) + ' · ' + row[1] + '</p><p class="when">' + row[2] + '</p>' +
+        (row[3].length ? '<div class="row">' + row[3].map((a, i) => startBtn(a, i === 0)).join('') + '</div>' : '') + '</section>' : '') +
+      '<section class="card start-full"><div><h2>Simulazione completa</h2><p>Come il giorno del test: verbale 35 minuti, numerico 20, astratto 10, uno dopo l\'altro.</p></div>' + startBtn(['full'], true) + '</section>' +
+      '<section class="grid3">' + sec('verbal') + sec('num') + sec('abs') + '</section>' +
+      '<section class="grid2">' +
+      '<div class="card"><h2>Cosa conta davvero</h2><ul class="facts">' +
+      '<li><b>Verbale</b><span>Serve almeno 10 su 20, ma il punteggio entra in graduatoria: pesa il 40% in quella preliminare e il 35% in quella finale. Ogni risposta giusta in più ti fa salire: è qui che si gioca il concorso.</span></li>' +
+      '<li><b>Numerico e astratto</b><span>Servono almeno 10 punti su 20 sommando i due test. Non entrano in graduatoria: punta a 13 o 14 per avere margine, senza togliere tempo al verbale.</span></li>' +
+      '<li><b>Risposte sbagliate</b><span>Il bando non prevede penalità: non lasciare mai una domanda senza risposta.</span></li>' +
+      '<li><b>Dopo</b><span>Solo chi supera entrambe le soglie passa alla Parte 2, nel 2027. I risultati della Parte 1 arrivano dopo questa sessione.</span></li>' +
+      '</ul><p class="src">Fonte: bando, punti 4.3.2 e 4.3.3, tabelle 2 e 6 (<a href="' + BANDO + '" target="_blank" rel="noopener">versione consolidata</a>).</p></div>' +
+      '<div class="card"><h2>Da fare prima del test</h2><div class="check">' +
+      CHECK.map(c => '<label><input type="checkbox" id="chk-' + c[0] + '" data-chk="' + c[0] + '"' + (chk[c[0]] ? ' checked' : '') + '><span>' + c[1] + '</span></label>').join('') +
+      '</div></div></section>' +
+      '<section class="card tips"><h2>Come si ragiona</h2><div class="grid3">' +
+      '<div><h3>Verbale · 1:45 a domanda</h3><ul><li>Conta solo il testo, anche quando sai che un\'affermazione è vera.</li><li>Diffida di «sempre», «mai», «solo», «tutti» se il testo dice «spesso», «alcuni», «soprattutto».</li><li>Correlazione non è causa: se il testo dice «suggerisce», «dimostra» è sbagliato.</li><li>Scarta prima le due opzioni contraddette, poi confronta le altre parola per parola col testo.</li></ul></div>' +
+      '<div><h3>Numerico · 2:00 a domanda</h3><ul><li>Stima prima a mente: se le opzioni sono lontane basta l\'ordine di grandezza.</li><li>La variazione percentuale si divide per il valore di partenza; i punti percentuali sono una differenza.</li><li>Grandezze nascoste: PIL = spesa ÷ quota sul PIL. Scrivi la catena nel blocco note.</li><li>«Nessuna delle precedenti» a volte è giusta: se il tuo risultato non c\'è, ricontrolla una volta e sceglila.</li></ul></div>' +
+      '<div><h3>Astratto · 1:00 a domanda</h3><ul><li>Un elemento alla volta: posizione, rotazione, numero, riempimento, forma, dimensione.</li><li>Trova la regola su tre figure e verificala sulle altre due.</li><li>Scarta le opzioni che violano anche una sola regola.</li><li>Non restare più di 90 secondi su una figura: segnala e torna dopo.</li></ul></div>' +
+      '</div><p class="src">Le prove di questa pagina seguono il formato dei <a href="' + ESEMPI + '" target="_blank" rel="noopener">test di esempio ufficiali</a>: verbale a 4 opzioni, numerico a 5. Nel test vero l\'astratto può usare regole diverse da quelle generate qui.</p></section>' +
+      VIEWS.storico(hist) +
+      '</div>';
+  };
+  VIEWS.storico = function (hist) {
+    hist = hist.filter(h => h.s && (h.s.verbal || h.s.num || h.s.abs));
+    if (!hist.length) return '<section class="card"><h2>I tuoi risultati</h2><p class="muted">Qui compaiono le prove che finisci, salvate solo in questo browser. Comincia con una simulazione completa per avere il tuo punto di partenza.</p></section>';
+    const cell = (s, k) => s[k] ? '<span class="num">' + s[k][0] + '/' + s[k][1] + '</span>' : '<span class="muted">—</span>';
+    const rows = hist.slice(-12).reverse().map(h => {
+      const d = new Date(h.t);
+      const tipo = h.mode === 'full' ? 'Simulazione completa' : h.mode === 'timed' ? 'Cronometrata' : 'Con spiegazioni';
+      return '<tr><td>' + GG[d.getDay()] + ' ' + d.getDate() + ' ' + MM[d.getMonth()] + '</td><td>' + tipo + '</td><td class="n">' + cell(h.s, 'verbal') + '</td><td class="n">' + cell(h.s, 'num') + '</td><td class="n">' + cell(h.s, 'abs') + '</td></tr>';
+    }).join('');
+    return '<section class="card"><h2>I tuoi risultati</h2><div class="tbl-wrap"><table class="simple"><thead><tr><th>Giorno</th><th>Prova</th><th class="n">Verbale</th><th class="n">Numerico</th><th class="n">Astratto</th></tr></thead><tbody>' + rows + '</tbody></table></div><p class="src">Salvati solo in questo browser.</p></section>';
+  };
+
+  VIEWS.piano = function () {
+    const t = oggi();
+    const rows = PIANO.map(p => '<tr' + (p[0] === t ? ' class="is-today"' : '') + '><td style="white-space:nowrap">' + dataBreve(p[0]) + (p[0] === t ? ' <span class="pill gold">oggi</span>' : '') + '</td><td><b>' + p[1] + '</b><br>' + p[2] + (p[3].length ? '<div class="row" style="margin-top:8px">' + p[3].map(a => startBtn(a)).join('') + '</div>' : '') + '</td></tr>').join('');
+    return '<div class="stack"><section><p class="eyebrow">Tre settimane</p><h1>Piano fino al 9 novembre</h1><p class="muted" style="margin-top:8px;max-width:62ch">Prima settimana per capire dove sei e imparare i tipi di domanda, seconda per la velocità, terza in condizioni d\'esame. Circa 45–75 minuti al giorno. Il verbale ha più spazio perché è l\'unico test che entra in graduatoria.</p></section>' +
+      '<section class="card"><div class="tbl-wrap"><table class="simple"><thead><tr><th>Giorno</th><th>Cosa fare</th></tr></thead><tbody>' + rows + '</tbody></table></div></section></div>';
+  };
+
+  VIEWS.regole = function () {
+    return '<div class="stack"><section><p class="eyebrow">Sessione online su TAO con Proctorio</p><h1>Il giorno del test</h1><p class="muted" style="margin-top:8px;max-width:62ch">Le regole qui sotto vengono dalle istruzioni EPSO per questo concorso (427-26 V1), dalla politica anti-frode e dal tuo invito. Fanno fede le istruzioni dell\'invito e del sito del concorso, non quelle dentro TAO: <a href="https://selection.eu-careers.europa.eu/system/files/2026-10/EN%20Instructions%20for%20online%20Testing%20%28TAO%29%20427-26%20V1.pdf" target="_blank" rel="noopener">leggile per intero</a>, insieme alla <a href="https://selection.eu-careers.europa.eu/system/files/2026-10/EN_261013%20EPSO%20Anti-cheating%20%20policy_0.pdf" target="_blank" rel="noopener">politica anti-frode</a>.</p></section>' +
+      '<section class="grid2">' +
+      '<div class="card"><h2>La sessione</h2><table class="simple"><tbody>' +
+      '<tr><td>Istruzioni generali</td><td>in inglese e francese</td></tr>' +
+      '<tr><td>Ragionamento verbale</td><td class="n">20 domande · 35 min</td></tr>' +
+      '<tr><td>Ragionamento numerico</td><td class="n">10 domande · 20 min</td></tr>' +
+      '<tr><td>Ragionamento astratto</td><td class="n">10 domande · 10 min</td></tr>' +
+      '</tbody></table><p class="muted">Tutti e tre nella lingua 1. Data e ora si vedono solo su TAO e non si possono cambiare, salvo forza maggiore.</p></div>' +
+      '<div class="card"><h2>Prima del giorno</h2><ul class="plain"><li>Controllo tecnico entro il 06/11 alle 11:59 del mattino, ora di Bruxelles. Si fa una volta sola, con lo stesso computer e le stesse impostazioni del test: preparati prima di cliccare Start. Senza, ogni reclamo tecnico viene respinto.</li><li>Computer tuo con diritti di amministratore. Chrome o Edge dalla versione 148, estensione Proctorio, permessi per fotocamera, microfono e registrazione dello schermo.</li><li>VPN, proxy, antivirus e firewall disattivati. Niente accesso remoto al computer e niente macchine virtuali.</li><li>Per allenarti sulla schermata vera apri la <a href="https://epso.prod.gcp-eu.taocloud.org/public-sessions" target="_blank" rel="noopener">sessione pubblica di TAO</a> e scegli «Reasoning Test - IT»: è un test di esempio anonimo, senza accesso e senza Proctorio. Il tempo del verbale lì è di 30 minuti, nel tuo test di 35.</li><li>Se il controllo tecnico dà problemi, contatta subito l\'assistenza TAO.</li></ul></div>' +
+      '<div class="card"><h2>Sul tavolo</h2><p><span class="pill ok">ammessi</span></p><ul class="plain"><li>Computer con il caricatore già collegato, un solo schermo, mouse, tastiera, tastierino numerico, adattatore USB multiporta</li><li>Documento d\'identità con nome e foto sullo stesso lato</li><li>Due fazzoletti e una bevanda in un contenitore trasparente senza etichetta</li></ul><p><span class="pill bad">vietati</span></p><ul class="plain"><li>Telefono sul tavolo o a portata di mano, smartwatch, docking station, secondo schermo</li><li>Cuffie, auricolari e tappi per le orecchie</li><li>Carta, penna, libri, appunti, calcolatrice esterna, cibo, giacche, cappelli, borse</li><li>Altre persone e animali nella stanza</li></ul></div>' +
+      '<div class="card"><h2>Durante il test</h2><ul class="plain"><li>Calcolatrice e blocco note sono solo sullo schermo: allenati senza carta, come in questa pagina. Ci sono anche evidenziatore, guida di lettura ed eliminazione delle risposte.</li><li>Puoi muoverti fra le domande e segnarle per rivederle.</li><li>Resta seduto e nell\'inquadratura, non coprirti il viso e non leggere ad alta voce: audio, video e schermo sono registrati e poi controllati da persone.</li><li>Il test può chiudersi da solo se esci da schermo intero, ricarichi o chiudi la scheda, ne apri un\'altra, colleghi il caricatore o un secondo schermo, cambi rete o resti scollegato da Proctorio per più di 2 minuti. Attiva Non disturbare: anche cliccare una notifica conta.</li><li>Se si chiude, torna su TAO: se «Continue testing» è attivo riprendi, altrimenti chiama l\'assistenza.</li></ul></div>' +
+      '<div class="card"><h2>Se qualcosa non va</h2><ul class="plain"><li>Durante il test chiama l\'assistenza TAO: <span class="num">+351 211 554 559</span>, dal lunedì al venerdì, 9–18, in inglese o francese. Puoi alzarti solo per prendere il telefono, poi resta seduto davanti alla fotocamera. L\'email epsotest.support@intelcia.com serve solo per i problemi del controllo tecnico.</li><li>Reclamo tecnico: dal portale SCP, entro 3 giorni di calendario a partire dal giorno dopo il test, scrivendo che è un reclamo e allegando la prova della chiamata (foto del registro chiamate o estratto della bolletta).</li><li>Il questionario dopo l\'esame è aperto per un\'ora a partire da 45 minuti dopo l\'inizio della sessione, e di nuovo dalle 17:30 alle 23:59 dello stesso giorno.</li><li>Per tutto il resto, scrivi a EPSO dal portale SCP, «Contact us».</li></ul></div>' +
+      '<div class="card"><h2>Il giorno prima</h2><ul class="plain"><li>Riavvia il computer, aggiorna il browser, chiudi tutti gli altri programmi e le altre schede.</li><li>Prepara la stanza e prova l\'inquadratura. Togli gli oggetti personali che rivelano religione, politica o stile di vita.</li><li>Controlla che il cavo del caricatore ti lasci sollevare il computer per la scansione della stanza: non staccarlo.</li><li>Se il documento non ha nome e foto sullo stesso lato, prepara un PDF unico con i due lati e invialo dal portale SCP entro le 23:59 del giorno dopo il test.</li><li>Niente prove lunghe: dieci domande di verbale al massimo, poi dormi.</li></ul></div>' +
+      '</section></div>';
+  };
+
+  VIEWS.dopo = function () {
+    const st = store.get('storie', {});
+    const ta = (k, label, ph) => '<label style="display:grid;gap:6px"><b>' + label + '</b><textarea class="story" id="st-' + k + '" data-story="' + k + '" placeholder="' + esc(ph) + '">' + esc(st[k] || '') + '</textarea></label>';
+    return '<div class="stack"><section><p class="eyebrow">Dopo la Parte 1</p><h1>Parte 2, lingue e colloqui</h1></section>' +
+      '<section class="card"><h2>Parte 2, nel 2027</h2><p>Solo per chi supera entrambe le soglie della Parte 1. Tutti i test sono nella lingua 2.</p><div class="tbl-wrap"><table class="simple"><thead><tr><th>Test</th><th class="n">Domande</th><th class="n">Durata</th><th class="n">Soglia</th><th class="n">Peso finale</th></tr></thead><tbody>' +
+      '<tr><td>Ragionamento verbale (Parte 1)</td><td class="n">20</td><td class="n">35 min</td><td class="n">10/20</td><td class="n">35%</td></tr>' +
+      '<tr><td>Conoscenza dell\'UE</td><td class="n">30</td><td class="n">40 min</td><td class="n">15/30</td><td class="n">25%</td></tr>' +
+      '<tr><td>Competenze digitali</td><td class="n">40</td><td class="n">30 min</td><td class="n">20/40</td><td class="n">25%</td></tr>' +
+      '<tr><td>Prova scritta (EUFTE)</td><td class="n">—</td><td class="n">40 min</td><td class="n">5/10</td><td class="n">15%</td></tr>' +
+      '</tbody></table></div><p class="muted">EPSO pubblica i riferimenti per il test di conoscenza dell\'UE almeno due mesi prima, e quelli per la prova scritta due settimane prima. La prova scritta e i documenti vengono controllati solo per i primi in graduatoria preliminare, circa 1,5 volte i 1.490 posti.</p><p class="src">Fonte: bando, tabelle 3–6 e punto 4.3.3; lettera EPSO ai candidati.</p></section>' +
+      '<section class="card"><h2>Lo spagnolo conta?</h2><ul class="facts">' +
+      '<li><b>In graduatoria</b><span>No. Il bando non dà punti per le lingue in più, e le lingue dei test non si possono più cambiare dalla chiusura delle candidature (10/03/2026).</span></li>' +
+      '<li><b>Dopo l\'assunzione</b><span>Sì. Lo Statuto dei funzionari (articolo 45, paragrafo 2) chiede di dimostrare di saper lavorare in una terza lingua prima della prima promozione: lo spagnolo può essere quella.</span></li>' +
+      '<li><b>Ai colloqui</b><span>Per alcuni posti una lingua in più è un vantaggio pratico. Tienilo pronto anche a voce.</span></li></ul></section>' +
+      '<section class="card"><h2>I colloqui</h2><p>Nel concorso non c\'è un colloquio: le fasi del bando sono solo test. I colloqui arrivano dopo, se entri nella lista di riserva: sono le istituzioni a contattarti, e ciascuna decide chi assumere. Essere in lista non garantisce l\'assunzione, e una lista resta valida in genere un anno, prorogabile.</p>' +
+      '<p>Di solito il colloquio dura 30–45 minuti davanti a due o quattro persone dell\'unità che assume, e mescola tre cose: motivazione, competenze raccontate con esempi veri, conoscenza del settore del posto. Prepara ora le storie: servono sempre, e scriverle adesso costa poco.</p></section>' +
+      '<section class="grid2"><div class="card"><h2>Domande da preparare</h2><ul class="qlist">' +
+      '<li><b>Perché le istituzioni europee, e perché proprio questa unità?</b><span class="hint">Collega un fatto della tua vita a una priorità concreta della DG. Niente frasi generiche sull\'Europa.</span></li>' +
+      '<li><b>Raccontami di un problema complesso che hai risolto con informazioni incomplete.</b><span class="hint">Analisi e giudizio: cosa sapevi, cosa hai deciso di assumere, come hai verificato.</span></li>' +
+      '<li><b>Una volta in cui hai dovuto convincere qualcuno che non era d\'accordo.</b><span class="hint">Comunicazione: gli argomenti che hai scelto per quella persona, non per te.</span></li>' +
+      '<li><b>Due scadenze incompatibili nella stessa settimana: come hai deciso?</b><span class="hint">Priorità e risultati: il criterio, chi hai avvisato, cosa hai lasciato indietro.</span></li>' +
+      '<li><b>Un conflitto in un gruppo, magari con colleghi di culture diverse.</b><span class="hint">Lavorare con gli altri: il tuo ruolo, non quello degli altri.</span></li>' +
+      '<li><b>Un errore che hai fatto, e cosa hai cambiato dopo.</b><span class="hint">Apprendimento: un errore vero, con una conseguenza vera.</span></li>' +
+      '<li><b>Il capo unità ti chiede per domani una nota di due pagine su un tema che non conosci.</b><span class="hint">Domanda di situazione: fonti, struttura, a chi chiedi, cosa consegni e quando.</span></li>' +
+      '<li><b>Presentati in due minuti in inglese, poi in un\'altra lingua.</b><span class="hint">Cambiare lingua a metà colloquio succede.</span></li>' +
+      '</ul></div>' +
+      '<div class="card"><h2>Le tue storie</h2><p class="muted">Metodo STAR: situazione, compito, azione, risultato. Una storia per riquadro, con numeri dove puoi. Restano solo in questo browser.</p>' +
+      ta('analisi', 'Un problema difficile risolto', 'Situazione: … Compito: … Azione: … Risultato: …') +
+      ta('convincere', 'Una persona da convincere', 'Situazione: … Compito: … Azione: … Risultato: …') +
+      ta('priorita', 'Scadenze e priorità', 'Situazione: … Compito: … Azione: … Risultato: …') +
+      ta('gruppo', 'Un conflitto in un gruppo', 'Situazione: … Compito: … Azione: … Risultato: …') +
+      ta('errore', 'Un errore e cosa hai imparato', 'Situazione: … Compito: … Azione: … Risultato: …') +
+      '</div></section></div>';
+  };
+
+  // ---------- render ----------
+  function render() {
+    const inExam = (EX && EX.phase !== 'results') || (W && W.phase === 'w');
+    topBar.hidden = !!inExam;
+    const scheda = view === 'scritta' ? 'fase2' : view;
+    document.querySelectorAll('.tabs [data-act="tab"]').forEach(b => b.setAttribute('aria-current', !EX && !W && b.dataset.v === scheda ? 'page' : 'false'));
+    app.className = (EX && EX.phase === 'q') || (W && W.phase === 'w') ? 'exam-mode' : 'wrap';
+    if (W) return renderScritta();
+    if (EX) { if (EX.phase === 'q') return renderExam(); if (EX.phase === 'between') return renderBetween(); return renderResults(); }
+    app.innerHTML = VIEWS[view]();
+  }
+
+  // ---------- prove ----------
+  function build(key, seed, n, f) {
+    if (isP2(key)) return buildBank(key, seed, n, f);
+    if (key === 'verbal') return M.buildVerbal(seed, n, BANK, store.get('visti', []));
+    if (key === 'num') return M.buildNum(seed, n);
+    return M.buildAbs(seed, n);
+  }
+  function startExam(mode, key, f) {
+    EX = { mode, keys: mode === 'full' ? ['verbal', 'num', 'abs'] : mode === 'full2' ? ['ue', 'dig'] : [key], f: f == null || f === '' ? null : f, si: 0, seed: (Date.now() % 2147483647) >>> 0, done: [], phase: 'q' };
+    openSection();
+  }
+  function openSection() {
+    const key = EX.keys[EX.si], practice = EX.mode === 'practice';
+    const n = practice ? 10 : SEZ[key].n;
+    const items = build(key, EX.seed + EX.si * 7919, n, EX.f);
+    if (!items.length) { EX = null; render(); return; }
+    EX.sec = { key, items, ans: items.map(() => null), flag: items.map(() => false), rev: items.map(() => false), q: 0, t0: Date.now(), total: SEZ[key].min * 60, notes: '' };
+    EX.phase = 'q';
+    render();
+    window.scrollTo(0, 0);
+    stopTimer(); EX.timer = setInterval(tick, 500); tick();
+  }
+  function stopTimer() { if (EX && EX.timer) { clearInterval(EX.timer); EX.timer = null; } }
+  const elapsed = () => (Date.now() - EX.sec.t0) / 1000;
+  function tick() {
+    if (!EX || EX.phase !== 'q') return;
+    const el = document.getElementById('timer'), pace = document.getElementById('pace'), s = EX.sec;
+    if (EX.mode === 'practice') { if (el) el.textContent = mmss(elapsed()); if (pace) pace.textContent = 'senza limite'; return; }
+    const left = s.total - elapsed();
+    if (el) { el.textContent = mmss(left); el.dataset.state = left <= 60 ? 'last' : left <= 300 ? 'warn' : ''; }
+    if (pace) pace.textContent = 'a questo ritmo: domanda ' + Math.min(s.items.length, Math.floor(elapsed() / (s.total / s.items.length)) + 1);
+    if (left <= 0) endSection(true);
+  }
+
+  function renderExam() {
+    const s = EX.sec, c = SEZ[s.key], practice = EX.mode === 'practice';
+    const step = EX.keys.length > 1 ? (EX.mode === 'full2' ? 'Simulazione Parte 2' : 'Simulazione completa') + ' · test ' + (EX.si + 1) + ' di ' + EX.keys.length : practice ? (EX.f === 'errori' ? 'Ripasso degli errori' : 'Allenamento con spiegazioni') : 'Prova cronometrata · ' + c.n + ' domande in ' + c.min + ' minuti';
+    const keys = ['7', '8', '9', '÷', '4', '5', '6', '×', '1', '2', '3', '−', '0', ',', '(', ')', 'C', '⌫', '+', '='];
+    app.innerHTML =
+      '<div class="exam-bar"><div class="wrap"><div class="eb-title"><span class="eyebrow">' + step + '</span><h1>' + c.t + '</h1></div>' +
+      '<div class="eb-tools">' + (s.key === 'num' ? '<button class="tool" data-act="panel" data-p="calc" aria-expanded="false">Calcolatrice</button>' : '') +
+      '<button class="tool" data-act="panel" data-p="notes" aria-expanded="false">Blocco note</button>' +
+      '<div class="timer-box"><span class="timer" id="timer" role="timer">--:--</span><span class="pace" id="pace"></span></div></div></div></div>' +
+      '<div class="wrap"><div class="exam-grid"><article class="qcard" id="qarea"></article><aside class="side" id="side"></aside></div></div>' +
+      '<div class="panel" id="p-calc" hidden><div class="panel-head"><span>Calcolatrice</span><button class="x" data-act="panel" data-p="calc" aria-label="Chiudi la calcolatrice">×</button></div>' +
+      '<input id="calc-in" class="calc-in" autocomplete="off" aria-label="Calcolo" placeholder="es. 6075 ÷ 1,82%"><div class="calc-out" id="calc-out" aria-live="polite">0</div>' +
+      '<div class="keys">' + keys.map(k => '<button data-act="ck" data-k="' + k + '"' + (k === '=' ? ' class="eq"' : '') + '>' + k + '</button>').join('') + '</div></div>' +
+      '<div class="panel" id="p-notes" hidden><div class="panel-head"><span>Blocco note</span><button class="x" data-act="panel" data-p="notes" aria-label="Chiudi il blocco note">×</button></div>' +
+      '<textarea id="notes" rows="8" placeholder="Come nel test vero: niente carta, solo questo riquadro."></textarea></div>';
+    const notes = document.getElementById('notes');
+    notes.value = s.notes;
+    notes.addEventListener('input', e => { EX.sec.notes = e.target.value; });
+    document.getElementById('calc-in').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); calc('='); } });
+    renderQ(); tick();
+  }
+
+  function renderQ() {
+    const s = EX.sec, it = s.items[s.q], practice = EX.mode === 'practice', rev = s.rev[s.q], a = s.ans[s.q];
+    const opts = it.opts.map((o, i) => {
+      let cls = 'opt';
+      if (a === i) cls += ' sel';
+      if (rev) { if (i === it.correct) cls += ' ok'; else if (a === i) cls += ' ko'; }
+      return '<button class="' + cls + '" data-act="opt" data-i="' + i + '" role="radio" aria-checked="' + (a === i) + '"' + (rev ? ' disabled' : '') + '><span class="let">' + LET[i] + '</span><span class="otext">' + o + '</span></button>';
+    }).join('');
+    const right = a === it.correct;
+    const fb = rev ? '<div class="feedback ' + (right ? 'good' : 'bad') + '"><strong>' + (right ? 'Giusta.' : 'Sbagliata.') + '</strong> La risposta corretta è la ' + LET[it.correct] + '. ' + it.why + '</div>' : '';
+    const last = s.q === s.items.length - 1;
+    const nr = practice
+      ? (rev ? '<button class="btn primary" data-act="' + (last ? 'finish' : 'next') + '">' + (last ? 'Vedi il riepilogo' : 'Avanti') + '</button>'
+             : '<button class="btn primary" data-act="reveal"' + (a == null ? ' disabled' : '') + '>Verifica</button>')
+      : '<button class="btn primary" data-act="' + (last ? 'finish' : 'next') + '">' + (last ? 'Consegna il test' : 'Successiva') + '</button>';
+    document.getElementById('qarea').innerHTML =
+      '<p class="qnum">Domanda ' + (s.q + 1) + ' di ' + s.items.length + (it.tema ? ' · ' + it.tema : '') + '</p>' +
+      '<div class="stim">' + it.stim + '</div><p class="qtext">' + it.q + '</p>' +
+      '<div class="opts' + (it.kind === 'abs' ? ' figs' : '') + '" role="radiogroup" aria-label="Risposte">' + opts + '</div>' + fb +
+      '<div class="qnav"><button class="btn" data-act="prev"' + (s.q === 0 ? ' disabled' : '') + '>Precedente</button>' +
+      (practice ? '' : '<button class="btn flag' + (s.flag[s.q] ? ' on' : '') + '" data-act="flag" aria-pressed="' + s.flag[s.q] + '">' + (s.flag[s.q] ? 'Segnata' : 'Segna per rivedere') + '</button>') +
+      nr + '</div>';
+    renderSide();
+  }
+
+  function renderSide(confirmHtml) {
+    const s = EX.sec, practice = EX.mode === 'practice', answered = s.ans.filter(x => x != null).length;
+    const cells = s.items.map((it, i) => {
+      let cls = 'cell';
+      if (practice && s.rev[i]) cls += s.ans[i] === it.correct ? ' good' : ' bad';
+      else if (s.ans[i] != null) cls += ' done';
+      if (s.flag[i]) cls += ' flagged';
+      if (i === s.q) cls += ' cur';
+      return '<button class="' + cls + '" data-act="go" data-q="' + i + '" aria-label="Domanda ' + (i + 1) + (s.ans[i] != null ? ', con risposta' : '') + (s.flag[i] ? ', segnata' : '') + '">' + (i + 1) + '</button>';
+    }).join('');
+    document.getElementById('side').innerHTML =
+      '<p class="side-h">Riepilogo</p><div class="cells">' + cells + '</div>' +
+      (practice ? '' : '<p class="legend"><span class="sw"></span> con risposta <span class="sw flagged"></span> segnata</p>') +
+      '<p class="count">' + answered + ' di ' + s.items.length + ' con risposta</p>' + (confirmHtml || '') +
+      '<button class="btn wide" data-act="finish">' + (practice ? 'Chiudi e vedi il riepilogo' : 'Consegna il test') + '</button>' +
+      '<button class="btn ghost wide" data-act="quit">Abbandona la prova</button>';
+  }
+
+  function choose(i) {
+    const s = EX.sec;
+    if (EX.mode === 'practice' && s.rev[s.q]) return;
+    s.ans[s.q] = i;
+    renderQ();
+  }
+  function go(q) {
+    const s = EX.sec;
+    if (q < 0 || q >= s.items.length) return;
+    s.q = q; renderQ();
+    const top = document.getElementById('qarea').getBoundingClientRect().top + window.scrollY - 90;
+    if (window.scrollY > top) window.scrollTo(0, Math.max(0, top));
+  }
+  function askFinish() {
+    const s = EX.sec, empty = s.ans.filter(x => x == null).length;
+    if (EX.mode === 'practice' || empty === 0) return endSection(false);
+    renderSide('<div class="confirm"><span>' + (empty === 1 ? 'Una domanda è' : empty + ' domande sono') + ' senza risposta. Non ci sono penalità: conviene rispondere comunque.</span><div class="row"><button class="btn" data-act="finishNo">Torna alle domande</button><button class="btn primary" data-act="finishYes">Consegna</button></div></div>');
+  }
+  function askQuit() {
+    renderSide('<div class="confirm"><span>Abbandonare la prova? Non verrà salvata.</span><div class="row"><button class="btn" data-act="finishNo">Continua</button><button class="btn primary" data-act="quitYes">Abbandona</button></div></div>');
+  }
+
+  function endSection(timeUp) {
+    stopTimer();
+    const s = EX.sec;
+    const score = s.items.reduce((n, it, i) => n + (s.ans[i] === it.correct ? 1 : 0), 0);
+    EX.done.push({ key: s.key, items: s.items, ans: s.ans.slice(), score, n: s.items.length, used: EX.mode === 'practice' ? elapsed() : Math.min(elapsed(), s.total), total: s.total, timeUp });
+    if (isP2(s.key)) segnaP2(s, EX.mode === 'practice');
+    if (s.key === 'verbal') { const v = new Set(store.get('visti', [])); s.items.forEach(it => v.add(it.id)); store.set('visti', [...v]); }
+    if (EX.si < EX.keys.length - 1) { EX.si++; EX.phase = 'between'; EX.timeUp = timeUp; render(); window.scrollTo(0, 0); return; }
+    const h = store.get('storico', []);
+    const sc = {}; EX.done.forEach(d => { sc[d.key] = [d.score, d.n, Math.round(d.used)]; });
+    const voce = { t: new Date().toISOString(), mode: EX.mode, s: sc }; if (EX.f != null) voce.f = EX.f;
+    h.push(voce);
+    store.set('storico', h.slice(-200));
+    EX.phase = 'results'; render(); window.scrollTo(0, 0);
+  }
+
+  function renderBetween() {
+    const c = SEZ[EX.keys[EX.si]];
+    app.innerHTML = '<section class="between"><p class="eyebrow">' + (EX.mode === 'full2' ? 'Simulazione Parte 2' : 'Simulazione completa') + ' · fine del test ' + EX.si + ' di ' + EX.keys.length + '</p><h1>' + (EX.timeUp ? 'Tempo scaduto.' : 'Test consegnato.') + '</h1>' +
+      '<p>Prossimo test: ' + c.t.toLowerCase() + ', ' + c.n + ' domande in ' + c.min + ' minuti. I punteggi li vedi alla fine.</p>' +
+      '<div class="row"><button class="btn primary" data-act="nextSection">Inizia</button></div></section>';
+  }
+
+  function renderResults() {
+    const d = EX.done, by = {}; d.forEach(x => { by[x.key] = x; });
+    let verdict = '';
+    if (EX.mode === 'full') {
+      const v = by.verbal.score, na = by.num.score + by.abs.score, ok = v >= 10 && na >= 10;
+      verdict = '<div class="verdict ' + (ok ? 'good' : 'bad') + '"><h2>' + (ok ? 'Soglie superate' : 'Una soglia non è superata') + '</h2>' +
+        '<p>Verbale ' + v + '/20 (soglia 10) · numerico più astratto ' + na + '/20 (soglia 10). ' + (ok ? 'Ora conta far salire il verbale: è l\'unico che entra in graduatoria.' : (v < 10 ? 'Lavora sul verbale con le spiegazioni.' : 'Lavora su numerico e astratto con le spiegazioni.')) + '</p></div>';
+    } else if (EX.mode === 'full2') {
+      const u = by.ue.score, g2 = by.dig.score, ok = u >= 15 && g2 >= 20;
+      verdict = '<div class="verdict ' + (ok ? 'good' : 'bad') + '"><h2>' + (ok ? 'Soglie superate' : 'Una soglia non è superata') + '</h2>' +
+        '<p>Conoscenza dell\'UE ' + u + '/30 (soglia 15) · competenze digitali ' + g2 + '/40 (soglia 20). ' + (u < 15 ? 'Senza 15 su 30 nella conoscenza dell\'UE il test digitale non viene nemmeno corretto: parti da lì.' : g2 < 20 ? 'Lavora sul digitale con le spiegazioni, un argomento alla volta.' : 'Sopra le soglie ogni punto conta: i due test pesano il 25% ciascuno nella graduatoria finale.') + '</p></div>';
+    } else if (EX.mode === 'timed') {
+      const x = d[0];
+      verdict = '<div class="verdict neutral"><p>' + (isP2(x.key) ? 'Soglia ' + SEZ[x.key].soglia + ' su ' + SEZ[x.key].n + '. Sopra la soglia ogni punto conta: questo test pesa il 30% nella prima graduatoria e il 25% in quella finale.' : x.key === 'verbal'
+        ? 'Soglia 10 su 20. Sopra la soglia ogni punto conta, perché il verbale pesa il 35% della graduatoria finale.'
+        : 'Numerico e astratto si sommano: servono almeno 10 su 20 in tutto. Con ' + x.score + ' qui, ti servirebbero almeno ' + Math.max(0, 10 - x.score) + ' nell\'altro test.') + '</p></div>';
+    }
+    const cards = d.map(x => {
+      const c = SEZ[x.key], pct = Math.round(x.score / x.n * 100);
+      const soglia = SEZ[x.key].soglia ? '<b style="left:50%"></b>' : '';
+      const tempo = EX.mode === 'practice' ? 'tempo ' + mmss(x.used) : (x.timeUp ? 'tempo scaduto' : 'usati ' + mmss(x.used) + ' di ' + mmss(x.total));
+      return '<div class="card score"><p class="eyebrow">' + c.t + '</p><p class="big">' + x.score + '<small> / ' + x.n + '</small></p><div class="bar"><i style="width:' + pct + '%"></i>' + soglia + '</div><p class="muted">' + tempo + '</p></div>';
+    }).join('');
+    const ripasso = (() => {
+      const nums = d.filter(x => x.key === 'num');
+      if (!nums.length) return '';
+      const err = {};
+      nums.forEach(x => x.items.forEach((it, i) => { if (x.ans[i] !== it.correct) { const k = TIPI[it.type] || it.type; err[k] = (err[k] || 0) + 1; } }));
+      const l = Object.entries(err).sort((a, b) => b[1] - a[1]);
+      return l.length ? '<p class="muted">Numerico, da ripassare: ' + l.map(e => e[0].toLowerCase() + ' (' + e[1] + ')').join(', ') + '.</p>' : '';
+    })();
+    const reviews = d.map(x => '<section class="stack" style="gap:10px"><h2>' + SEZ[x.key].t + ': correzione</h2><div class="revlist">' + x.items.map((it, i) => {
+      const a = x.ans[i], ok = a === it.correct;
+      const label = isP2(it.kind) || it.kind === 'verbal' ? it.tema : it.kind === 'num' ? (TIPI[it.type] || '') : 'Livello ' + it.level;
+      return '<details class="rev"><summary><span class="rn">' + (i + 1) + '</span><span class="pill ' + (ok ? 'ok' : a == null ? '' : 'bad') + '">' + (ok ? 'Giusta' : a == null ? 'Senza risposta' : 'Sbagliata') + '</span><span class="rq">' + esc(label) + '</span></summary>' +
+        '<div class="rev-body"><div class="stim">' + it.stim + '</div><p class="qtext">' + it.q + '</p><div class="opts' + (it.kind === 'abs' ? ' figs' : '') + '">' +
+        it.opts.map((o, j) => '<div class="opt' + (j === it.correct ? ' ok' : '') + (j === a && !ok ? ' ko' : '') + '"><span class="let">' + LET[j] + '</span><span class="otext">' + o + '</span></div>').join('') +
+        '</div><p class="why">' + it.why + '</p></div></details>';
+    }).join('') + '</div></section>').join('');
+    const p2 = isP2(EX.keys[0]);
+    const again = EX.mode === 'full' ? ['full'] : [EX.mode, EX.keys[0]];
+    const rifai = p2 ? p2btn(EX.mode, EX.mode === 'full2' ? '' : EX.keys[0], EX.f, 'Rifai con domande nuove', true) : startBtn(again, true).replace(etichetta(again), 'Rifai con domande nuove');
+    app.innerHTML = '<div class="stack"><section><p class="eyebrow">' + (EX.mode === 'full' ? 'Simulazione completa' : EX.mode === 'full2' ? 'Simulazione Parte 2' : EX.mode === 'timed' ? 'Prova cronometrata' : EX.f === 'errori' ? 'Ripasso degli errori' : 'Allenamento con spiegazioni') + '</p><h1>Risultati</h1></section>' +
+      verdict + '<section class="score-row">' + cards + '</section>' + ripasso + (p2 ? areeRisultato(d) : '') +
+      '<div class="row">' + rifai + '<button class="btn" data-act="home">' + (p2 ? 'Torna alla Fase 2' : 'Torna alla Parte 1') + '</button></div>' + reviews + '</div>';
+  }
+
+  // ---------- calcolatrice ----------
+  function calc(k) {
+    const inp = document.getElementById('calc-in'), out = document.getElementById('calc-out');
+    if (!inp) return;
+    if (k === 'C') { inp.value = ''; out.textContent = '0'; return; }
+    if (k === '⌫') { inp.value = inp.value.slice(0, -1); return; }
+    if (k !== '=') { inp.value += k; inp.focus(); return; }
+    let e = inp.value.replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-').replace(/\s/g, '');
+    e = e.indexOf(',') >= 0 ? e.replace(/\./g, '').replace(/,/g, '.') : e;
+    e = e.replace(/(\d+(?:\.\d+)?)%/g, '($1/100)');
+    if (!/^[0-9+\-*/().]+$/.test(e)) { out.textContent = 'Solo numeri e + − × ÷ ( ) %'; return; }
+    try {
+      const v = Function('"use strict";return (' + e + ')')();
+      out.textContent = isFinite(v) ? new Intl.NumberFormat('it-IT', { maximumFractionDigits: 6, useGrouping: 'always' }).format(v) : 'Errore';
+    } catch (err) { out.textContent = 'Espressione incompleta'; }
+  }
+
+
+  // ================= FASE 2 =================
+  // Conoscenza dell'UE e competenze digitali riusano la schermata d'esame della Parte 1
+  // (chiavi 'ue' e 'dig' in SEZ); la prova scritta ha una schermata sua.
+  const UE = window.UE_BANK || { aree: [], q: [] }, DIG = window.DIG_BANK || { aree: [], q: [] };
+  const SCR = window.SCRITTA || { casi: [], griglia: [] };
+  const BANCA = { ue: UE, dig: DIG };
+  const isP2 = k => k === 'ue' || k === 'dig';
+  const AVVISO13 = 'https://selection.eu-careers.europa.eu/en/news/ad5-graduates-first-phase-testing-ended-today-over-95-test-completion-rate/20941';
+  const MATERIALE = 'https://op.europa.eu/en/web/general-publications/eucareersmaterial';
+
+  function rng(seed) {
+    let a = seed >>> 0;
+    return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  }
+  function mescola(arr, r) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); const x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
+  function poolP2(key, f) {
+    const st = store.get('q2', {});
+    if (f === 'errori') return BANCA[key].q.filter(q => (st[q[0]] || [0, 0, 0])[2]);
+    if (f != null && f !== '') return BANCA[key].q.filter(q => q[1] === Number(f));
+    return BANCA[key].q;
+  }
+  function buildBank(key, seed, n, f) {
+    const B = BANCA[key], r = rng(seed), st = store.get('q2', {});
+    // prima le domande mai viste, poi quelle sbagliate l'ultima volta, poi le altre; in ogni gruppo si alternano gli argomenti
+    const gruppi = [[], [], []];
+    mescola(poolP2(key, f), r).forEach(q => { const s = st[q[0]]; gruppi[!s ? 0 : s[2] ? 1 : 2].push(q); });
+    const ordinati = [];
+    gruppi.forEach(g => {
+      const per = {}; g.forEach(q => { (per[q[1]] = per[q[1]] || []).push(q); });
+      const ks = mescola(Object.keys(per), r); let more = true;
+      while (more) { more = false; ks.forEach(k => { if (per[k].length) { ordinati.push(per[k].pop()); more = true; } }); }
+    });
+    return mescola(ordinati.slice(0, n), r).map(q => {
+      const ord = mescola([0, 1, 2, 3], r);
+      const src = !q[5] ? '' : /^https?:\/\//.test(q[5]) ? ' <a href="' + esc(q[5]) + '" target="_blank" rel="noopener">Fonte</a>.' : ' <span class="muted">Fonte: ' + esc(q[5]) + '.</span>';
+      return { id: q[0], kind: key, area: q[1], tema: B.aree[q[1]], stim: '', q: '<span lang="en">' + esc(q[2]) + '</span>',
+        opts: ord.map(i => '<span lang="en">' + esc(q[3][i]) + '</span>'), correct: ord.indexOf(0),
+        why: esc(q[4]) + src + (q[7] ? ' <span class="pill gold">può cambiare nel tempo</span>' : ''), level: q[6] };
+    });
+  }
+  function segnaP2(s, practice) {
+    const st = store.get('q2', {}), ar = store.get('aree', {});
+    s.items.forEach((it, i) => {
+      if (practice && !s.rev[i]) return; // in allenamento contano solo le domande verificate
+      const ok = s.ans[i] === it.correct, v = st[it.id] || [0, 0, 0];
+      v[0]++; if (!ok) v[1]++; v[2] = ok ? 0 : 1; st[it.id] = v;
+      const k = s.key + ':' + it.area, a = ar[k] || [0, 0]; a[1]++; if (ok) a[0]++; ar[k] = a;
+    });
+    store.set('q2', st); store.set('aree', ar);
+  }
+
+  // ---------- punteggi ----------
+  const PESI = [['verbal', 'Ragionamento verbale', 35, 'Parte 1'], ['ue', 'Conoscenza dell\'UE', 25, '30 domande'], ['dig', 'Competenze digitali', 25, '40 domande'], ['scr', 'Prova scritta', 15, 'su 10']];
+  const media = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
+  function ultimi(key, k) {
+    return store.get('storico', []).filter(h => h.mode !== 'practice' && h.s && h.s[key]).slice(-k).map(h => h.s[key][0] / h.s[key][1]);
+  }
+  const votoSaggio = s => (s.claude != null ? s.claude : s.auto);
+  function quote() {
+    const imp = store.get('impost2', {}), sg = store.get('saggi', []).filter(s => votoSaggio(s) != null);
+    const v = imp.verbale1 != null && imp.verbale1 !== '' ? Number(imp.verbale1) / 20 : null;
+    return { verbal: v, ue: media(ultimi('ue', 3)), dig: media(ultimi('dig', 3)), scr: sg.length ? media(sg.slice(-3).map(s => votoSaggio(s) / 10)) : null };
+  }
+  const colore = f => (f < 0.5 ? 'low' : f < 0.65 ? 'midc' : 'hi');
+  function p2btn(mode, key, f, label, primary, disabled, small) {
+    return '<button class="btn' + (primary ? ' primary' : '') + (small ? ' small' : '') + '" data-act="start" data-mode="' + mode + '" data-sec="' + (key || '') + '" data-f="' + (f == null ? '' : f) + '"' + (disabled ? ' disabled' : '') + '>' + label + '</button>';
+  }
+  function giorniA(dataIso) { const p = String(dataIso).split('-').map(Number); if (p.length !== 3 || !p[0]) return null; const n = new Date(); return Math.round((new Date(p[0], p[1] - 1, p[2]) - new Date(n.getFullYear(), n.getMonth(), n.getDate())) / 86400000); }
+
+  VIEWS.fase2 = function () {
+    const imp = store.get('impost2', {}), q = quote(), st = store.get('q2', {}), ar = store.get('aree', {});
+    const hist = store.get('storico', []), sg = store.get('saggi', []);
+    const g = imp.data2 ? giorniA(imp.data2) : null;
+    const cnt = g != null && g >= 0 ? '<span class="big">' + g + '</span><span class="lbl">' + (g === 1 ? 'giorno' : 'giorni') + ' alla Parte 2</span>'
+      : '<span class="big">2027</span><span class="lbl">primavera, date non ancora pubblicate</span>';
+
+    // graduatoria finale stimata
+    let somma = 0, pesi = 0;
+    const righe = PESI.map(p => {
+      const f = q[p[0]];
+      if (f != null) { somma += f * p[2]; pesi += p[2]; }
+      const val = f == null ? '<span class="muted">manca</span>' : (f * p[2]).toFixed(1).replace('.', ',') + '<small>su ' + p[2] + '</small>';
+      return '<div class="wrow"><div class="lab"><b>' + p[1] + '</b><span>pesa il ' + p[2] + '% · ' + p[3] + '</span></div>' +
+        '<div class="bar tall">' + (f == null ? '' : '<i class="' + colore(f) + '" style="width:' + Math.round(f * 100) + '%"></i>') + '<b style="left:50%"></b></div>' +
+        '<div class="pts">' + val + '</div></div>';
+    }).join('');
+    const tot = pesi ? somma / pesi * 100 : null;
+    const completo = pesi === 100;
+    const totale = tot == null
+      ? '<p class="muted">Fai una prova cronometrata per ogni test: qui compare la tua stima sulla graduatoria finale.</p>'
+      : '<div class="totale"><span class="big">' + tot.toFixed(0) + '<small> / 100</small></span><span class="muted">' + (completo ? 'stima sulla graduatoria finale, dalle tue ultime tre prove di ogni test' : 'stima parziale: calcolata solo sui test che hai già provato') + '</span></div>';
+
+    // i tre test
+    const card = key => {
+      const c = SEZ[key], u = ultimi(key, 3), last = hist.filter(h => h.mode !== 'practice' && h.s && h.s[key]).slice(-1)[0];
+      const err = BANCA[key].q.filter(x => (st[x[0]] || [0, 0, 0])[2]).length;
+      const viste = BANCA[key].q.filter(x => st[x[0]]).length;
+      const m = media(u);
+      const pill = m == null ? '<span class="pill">mai provato</span>' : m >= 0.5 ? '<span class="pill ok">sopra la soglia</span>' : '<span class="pill bad">sotto la soglia</span>';
+      return '<div class="card test-card"><h3>' + c.t + '</h3><p class="muted">' + c.n + ' domande in ' + c.min + ' minuti, in inglese. Soglia ' + c.soglia + ' su ' + c.n + '.</p>' +
+        '<div class="row">' + (last ? '<span class="last">' + last.s[key][0] + '<small> / ' + last.s[key][1] + '</small></span>' : '') + pill + '</div>' +
+        '<p class="muted">' + (m == null ? 'Nessuna prova cronometrata.' : 'Media delle ultime ' + u.length + ': ' + Math.round(m * c.n) + ' su ' + c.n + '.') + ' Viste ' + viste + ' domande su ' + BANCA[key].q.length + '.</p>' +
+        '<div class="row">' + p2btn('timed', key, null, 'Cronometrato', true, !BANCA[key].q.length) + p2btn('practice', key, null, '10 con spiegazioni', false, !BANCA[key].q.length) +
+        p2btn('practice', key, 'errori', 'Ripassa gli errori (' + err + ')', false, !err) + '</div></div>';
+    };
+    const ultimoS = sg.slice(-1)[0];
+    const cardScr = '<div class="card test-card"><h3>Prova scritta</h3><p class="muted">Un testo in inglese in 40 minuti, a partire da un dossier. Soglia 5 su 10.</p>' +
+      '<div class="row">' + (ultimoS && votoSaggio(ultimoS) != null ? '<span class="last">' + String(votoSaggio(ultimoS)).replace('.', ',') + '<small> / 10</small></span>' : '') +
+      (q.scr == null ? '<span class="pill">mai provata</span>' : q.scr >= 0.5 ? '<span class="pill ok">sopra la soglia</span>' : '<span class="pill bad">sotto la soglia</span>') + '</div>' +
+      '<p class="muted">' + sg.length + (sg.length === 1 ? ' testo scritto' : ' testi scritti') + ' su ' + SCR.casi.length + ' casi.</p>' +
+      '<div class="row"><button class="btn primary" data-act="tab" data-v="scritta">Scegli un caso</button></div></div>';
+
+    // argomenti
+    const aree = key => BANCA[key].aree.map((nome, i) => {
+      const a = ar[key + ':' + i];
+      return { key, i, nome, f: a && a[1] ? a[0] / a[1] : null, n: a ? a[1] : 0 };
+    });
+    const tutte = aree('ue').concat(aree('dig')).sort((x, y) => (x.f == null ? 2 : x.f) - (y.f == null ? 2 : y.f));
+    const righeAree = tutte.map(a => '<div class="area-row"><div><b>' + esc(a.nome) + '</b> <span class="muted">· ' + (a.key === 'ue' ? 'UE' : 'digitale') + '</span></div>' +
+      '<div class="bar">' + (a.f == null ? '' : '<i class="' + colore(a.f) + '" style="width:' + Math.round(a.f * 100) + '%"></i>') + '</div>' +
+      '<div class="pc">' + (a.f == null ? '<span class="muted">—</span>' : Math.round(a.f * 100) + '%') + '</div>' +
+      p2btn('practice', a.key, a.i, 'Allenati', false, false, true) + '</div>').join('');
+
+    // storico
+    const h2 = hist.filter(h => h.s && (h.s.ue || h.s.dig)).slice(-10).reverse();
+    const cell = (s, k) => (s[k] ? '<span class="num">' + s[k][0] + '/' + s[k][1] + '</span>' : '<span class="muted">—</span>');
+    const storico = h2.length ? '<section class="card"><h2>Le tue prove della Fase 2</h2><div class="tbl-wrap"><table class="simple"><thead><tr><th>Giorno</th><th>Prova</th><th class="n">Conoscenza UE</th><th class="n">Digitale</th></tr></thead><tbody>' +
+      h2.map(h => { const d = new Date(h.t); const tipo = h.mode === 'full2' ? 'Simulazione Parte 2' : h.mode === 'timed' ? 'Cronometrata' : h.f === 'errori' ? 'Ripasso degli errori' : 'Con spiegazioni';
+        return '<tr><td>' + GG[d.getDay()] + ' ' + d.getDate() + ' ' + MM[d.getMonth()] + '</td><td>' + tipo + '</td><td class="n">' + cell(h.s, 'ue') + '</td><td class="n">' + cell(h.s, 'dig') + '</td></tr>'; }).join('') +
+      '</tbody></table></div></section>' : '';
+
+    return '<div class="stack">' +
+      '<section class="hero"><div><p class="eyebrow">EPSO/AD/427/26 · Parte 2</p><h1>Conoscenza dell\'UE, digitale e prova scritta</h1>' +
+      '<p class="sub">Per chi supera le soglie dei test di ragionamento. EPSO prevede la Parte 2 nella primavera del 2027; i risultati della Parte 1 arrivano dopo le prove di recupero del primo trimestre. Tutti i test sono nella lingua 2: qui le domande sono in inglese.</p></div>' +
+      '<div class="count-box">' + cnt + '</div></section>' +
+      '<section class="card"><h2>Dove saresti in graduatoria</h2>' + totale + '<div>' + righe + '</div>' +
+      '<p class="src">La linea nera è la soglia. I pesi sono quelli della graduatoria finale del bando (35, 25, 25, 15). Il punteggio vero dipende anche dagli altri candidati: questa è una misura di quanto sei pronto, non una previsione del posto.</p>' +
+      '<div class="inl"><label for="in-verbale">Il tuo verbale della Parte 1, su 20</label><input id="in-verbale" type="number" min="0" max="20" step="1" inputmode="numeric" data-imp="verbale1" value="' + (imp.verbale1 != null ? esc(imp.verbale1) : '') + '">' +
+      '<label for="in-data2">Data della Parte 2</label><input id="in-data2" type="date" data-imp="data2" value="' + esc(imp.data2 || '') + '"></div>' +
+      '<p class="src" id="sync-st">' + testoSync() + '</p></section>' +
+      '<section class="card start-full"><div><h2>Simulazione della Parte 2</h2><p>Conoscenza dell\'UE (40 minuti) e competenze digitali (30 minuti), una dopo l\'altra. La prova scritta si fa a parte.</p></div>' + p2btn('full2', '', null, 'Simulazione Parte 2', true, !UE.q.length || !DIG.q.length) + '</section>' +
+      '<section class="grid3">' + card('ue') + card('dig') + cardScr + '</section>' +
+      '<section class="card"><h2>Argomenti, dal più debole</h2><p class="muted">Percentuale di risposte giuste per argomento, su tutte le prove. «Allenati» apre dieci domande con spiegazione su quell\'argomento.</p><div>' + righeAree + '</div></section>' +
+      '<section class="grid2">' +
+      '<div class="card"><h2>Cosa dice il bando</h2><ul class="facts">' +
+      '<li><b>Ordine</b><span>EPSO corregge prima la conoscenza dell\'UE. Il test digitale viene corretto solo a chi ha preso almeno 15 su 30.</span></li>' +
+      '<li><b>Prima graduatoria</b><span>Verbale 40%, conoscenza dell\'UE 30%, digitale 30%. La prova scritta viene corretta solo ai primi, circa 2.235 candidati: una volta e mezza i 1.490 posti.</span></li>' +
+      '<li><b>Graduatoria finale</b><span>Verbale 35%, conoscenza dell\'UE 25%, digitale 25%, prova scritta 15%.</span></li>' +
+      '<li><b>Assenze</b><span>Chi non si presenta o non completa uno dei test della Parte 2 esce dal concorso.</span></li>' +
+      '<li><b>Non detto</b><span>Il bando non dice quante opzioni ha ogni domanda né se le risposte sbagliate tolgono punti. Qui le opzioni sono quattro e non ci sono penalità, come nella Parte 1.</span></li>' +
+      '</ul><p class="src">Fonte: <a href="' + BANDO + '" target="_blank" rel="noopener">bando</a>, punti 4.3.2 e 4.3.3; <a href="' + AVVISO13 + '" target="_blank" rel="noopener">avviso EPSO del 13/11/2026</a>.</p></div>' +
+      '<div class="card"><h2>Come prepararsi</h2><ul class="plain">' +
+      '<li><b>Conoscenza dell\'UE.</b> EPSO pubblica i riferimenti ufficiali circa due mesi prima del test. Fino ad allora vale la <a href="' + MATERIALE + '" target="_blank" rel="noopener">raccolta dell\'Ufficio delle pubblicazioni</a>, che EPSO indica solo come orientamento.</li>' +
+      '<li><b>Digitale.</b> Il test segue il quadro DigComp 2.2 e le sue cinque aree: informazioni e dati, comunicazione e collaborazione, creazione di contenuti, sicurezza, risoluzione di problemi. Sono 40 domande in 30 minuti: 45 secondi l\'una.</li>' +
+      '<li><b>Prova scritta.</b> Valuta come scrivi, non cosa sai né il tuo inglese: struttura, concisione, chiarezza, adattamento al lettore, uso del dossier. Il dossier vero esce sul sito EPSO prima del test.</li>' +
+      '<li><b>Ritmo consigliato.</b> Due prove cronometrate e un testo scritto a settimana, più dieci domande con spiegazione nei giorni liberi sull\'argomento più debole.</li>' +
+      '</ul><p class="src">Le domande di questa pagina sono scritte per allenarsi, non vengono da EPSO: ' + UE.q.length + ' sulla conoscenza dell\'UE e ' + DIG.q.length + ' sul digitale, ricontrollate il 16/11/2026. Ogni spiegazione cita la fonte: se una risposta ti sembra sbagliata, verifica lì.</p></div>' +
+      '</section>' + storico + '</div>';
+  };
+
+  // ---------- prova scritta ----------
+  let W = null, SAMPLE = null;
+  const parole = t => (String(t).trim().match(/\S+/g) || []).length;
+  const casoById = id => SCR.casi.find(c => c.id === id);
+  VIEWS.scritta = function () {
+    const sg = store.get('saggi', []), bozza = store.get('bozza', null);
+    const riprendi = bozza && casoById(bozza.caso) && parole(bozza.text) > 0
+      ? '<section class="card today"><p class="eyebrow">Bozza non consegnata</p><p class="when">' + esc(casoById(bozza.caso).tema) + ' · ' + parole(bozza.text) + ' parole</p><div class="row"><button class="btn primary" data-act="scrivi" data-caso="' + bozza.caso + '" data-riprendi="1">Riprendi</button><button class="btn ghost" data-act="buttaBozza">Elimina la bozza</button></div></section>' : '';
+    const casi = SCR.casi.map(c => {
+      const miei = sg.filter(s => s.caso === c.id), best = miei.map(votoSaggio).filter(v => v != null).sort((a, b) => b - a)[0];
+      return '<div class="card"><h3 lang="en">' + esc(c.tema) + '</h3><p class="muted" lang="en">' + esc(c.task.split('. ').slice(1, 2).join('. ') || c.task).slice(0, 190) + '</p>' +
+        '<div class="row">' + (miei.length ? '<span class="pill ' + (best >= 5 ? 'ok' : 'bad') + '">miglior voto ' + String(best).replace('.', ',') + ' / 10</span>' : '<span class="pill">da fare</span>') + '</div>' +
+        '<div class="row"><button class="btn primary" data-act="scrivi" data-caso="' + c.id + '">Scrivi in 40 minuti</button></div></div>';
+    }).join('');
+    const lista = sg.length ? '<section class="stack" style="gap:10px"><h2>I tuoi testi</h2><div class="revlist">' + sg.slice().reverse().map(s => {
+      const c = casoById(s.caso), d = new Date(s.t), v = votoSaggio(s);
+      return '<details class="rev"><summary><span class="rn">' + (v == null ? '—' : String(v).replace('.', ',')) + '</span><span class="pill ' + (v == null ? '' : v >= 5 ? 'ok' : 'bad') + '">' + (s.claude != null ? 'voto di Claude' : 'autovalutazione') + '</span><span class="rq">' + GG[d.getDay()] + ' ' + d.getDate() + ' ' + MM[d.getMonth()] + ' · ' + esc(c ? c.tema : s.caso) + ' · ' + s.parole + ' parole in ' + Math.round(s.sec / 60) + ' min</span></summary>' +
+        '<div class="rev-body">' + (s.det ? esitoHtml(s.det) : '') + '<div class="essay-read" lang="en">' + esc(s.testo || '') + '</div></div></details>';
+    }).join('') + '</div></section>' : '';
+    return '<div class="stack"><section><p class="eyebrow">Parte 2 · prova scritta</p><h1>Scrivere in 40 minuti</h1><p class="muted" style="margin-top:8px;max-width:64ch">Leggi il dossier, rispondi alla consegna in circa 300 parole, consegna. Poi il testo viene valutato sui cinque criteri che EPSO pubblica per questa prova. La lunghezza e il peso uguale dei criteri sono scelte di questa pagina: il bando non li indica.</p>' +
+      '<div class="row" style="margin-top:12px"><button class="btn" data-act="tab" data-v="fase2">Torna alla Fase 2</button></div></section>' +
+      riprendi + '<section class="grid2">' + casi + '</section>' + lista + '</div>';
+  };
+  function apriScritta(id, riprendi) {
+    const bozza = store.get('bozza', null), c = casoById(id);
+    if (!c) return;
+    const usa = riprendi && bozza && bozza.caso === id;
+    W = { caso: c, phase: 'w', total: 40 * 60, text: usa ? bozza.text : '', gia: usa ? (bozza.sec || 0) : 0, t0: Date.now(), sec: 0, auto: {}, punti: {}, res: null, stato: '' };
+    render(); window.scrollTo(0, 0);
+    W.timer = setInterval(tickW, 500); tickW();
+  }
+  const secW = () => W.gia + (Date.now() - W.t0) / 1000;
+  function tickW() {
+    if (!W || W.phase !== 'w') return;
+    const el = document.getElementById('timer'), left = W.total - secW();
+    if (el) { el.textContent = mmss(left); el.dataset.state = left <= 60 ? 'last' : left <= 300 ? 'warn' : ''; }
+    if (left <= 0) consegnaW();
+  }
+  function consegnaW() {
+    if (!W) return;
+    clearInterval(W.timer); W.timer = null;
+    const ta = document.getElementById('saggio'); if (ta) W.text = ta.value;
+    W.sec = Math.min(W.total, Math.round(secW())); W.phase = 'v';
+    store.set('bozza', null);
+    render(); window.scrollTo(0, 0);
+  }
+  function renderScritta() {
+    const c = W.caso;
+    if (W.phase === 'w') {
+      app.innerHTML = '<div class="exam-bar"><div class="wrap"><div class="eb-title"><span class="eyebrow">Prova scritta · 40 minuti</span><h1 lang="en">' + esc(c.tema) + '</h1></div>' +
+        '<div class="eb-tools"><span class="wc" id="wc">0 parole</span><div class="timer-box"><span class="timer" id="timer" role="timer">--:--</span><span class="pace">circa 300 parole</span></div></div></div></div>' +
+        '<div class="wrap"><div class="write-grid"><article class="qcard"><p class="qnum">Dossier</p><div class="brief" lang="en">' + esc(c.brief) + '</div><div class="task" lang="en"><b>Assignment.</b> ' + esc(c.task) + '</div></article>' +
+        '<div class="stack" style="gap:12px"><label class="eyebrow" for="saggio">Il tuo testo, in inglese</label><textarea class="essay" id="saggio" lang="en" spellcheck="false" placeholder="Write your text here."></textarea>' +
+        '<div class="row" id="w-azioni"><button class="btn primary" data-act="consegnaW">Consegna</button><button class="btn ghost" data-act="lasciaW">Esci e tieni la bozza</button></div></div></div></div>';
+      const ta = document.getElementById('saggio'); ta.value = W.text;
+      const conta = () => { document.getElementById('wc').textContent = parole(ta.value) + ' parole'; };
+      let tSalva = null;
+      ta.addEventListener('input', () => { W.text = ta.value; conta(); clearTimeout(tSalva); tSalva = setTimeout(() => { if (W && W.phase === 'w') store.set('bozza', { caso: c.id, text: W.text, sec: Math.round(secW()) }); }, 1200); });
+      conta(); tickW();
+      return;
+    }
+    // valutazione
+    const n = parole(W.text), pochi = n < 40;
+    const auto = SCR.griglia.map((k, i) => '<div class="crit"><div class="crit-h">' + esc(k.nome) + '<span>' + (W.auto[i] == null ? '—' : String(W.auto[i] / 3 * k.peso).replace('.', ',').slice(0, 4)) + ' / ' + k.peso + '</span></div><div class="lev">' +
+      k.livelli.map((l, j) => '<label><input type="radio" name="auto-' + i + '" id="auto-' + i + '-' + j + '" data-auto="' + i + '" value="' + j + '"' + (W.auto[i] === j ? ' checked' : '') + '><span>' + esc(l) + '</span></label>').join('') + '</div></div>').join('');
+    const totAuto = votoAuto();
+    const punti = c.punti.map((p, i) => '<label><input type="checkbox" id="pt-' + i + '" data-punto="' + i + '"' + (W.punti[i] ? ' checked' : '') + '><span>' + esc(p) + '</span></label>').join('');
+    const claude = !SAMPLE
+      ? (window.claude
+        ? '<p class="muted">La valutazione di Claude funziona quando apri la Palestra dentro Claude con il tuo account. Per ora usa l\'autovalutazione qui sotto.</p>'
+        : '')
+      : W.res ? esitoHtml(W.res) + '<div class="row"><button class="btn" data-act="valuta">Valuta di nuovo</button></div>'
+      : '<p class="muted">Claude legge dossier, consegna e testo, e assegna un voto da 0 a 2 per ognuno dei cinque criteri, con un commento. Usa il tuo account Claude: la prima volta ti chiede il permesso.</p>' +
+        (pochi ? '<p class="note">Il testo ha ' + n + ' parole: troppo poco per essere valutato.</p>' : '') +
+        '<div class="row"><button class="btn primary" data-act="valuta"' + (pochi || W.stato === 'attesa' ? ' disabled' : '') + '>' + (W.stato === 'attesa' ? 'Sto valutando…' : 'Valuta con Claude') + '</button>' +
+        (W.stato === 'attesa' ? '<button class="btn" data-act="fermaValuta">Ferma</button>' : '') + '</div>' +
+        (W.stato && W.stato !== 'attesa' ? '<p class="note">' + esc(W.stato) + '</p>' : '');
+    app.innerHTML = '<div class="stack"><section><p class="eyebrow">Prova scritta · consegnata</p><h1 lang="en">' + esc(c.tema) + '</h1>' +
+      '<p class="muted" style="margin-top:8px">' + n + ' parole in ' + mmss(W.sec) + ' su 40:00.' + (n > 380 ? ' Sei oltre le 300 parole indicate: la concisione è uno dei criteri.' : n < 220 && !pochi ? ' Sei sotto le 300 parole indicate: controlla di aver risposto a tutta la consegna.' : '') + '</p></section>' +
+      (window.claude ? '<section class="card"><h2>Valutazione di Claude</h2>' + claude + '</section>' : '') +
+      '<section class="grid2"><div class="card"><h2>Autovalutazione</h2><p class="muted">Per ogni criterio scegli la descrizione che somiglia di più al tuo testo.' + (totAuto == null ? '' : ' Voto: <b class="num">' + String(totAuto).replace('.', ',') + ' / 10</b>.') + '</p><div>' + auto + '</div></div>' +
+      '<div class="stack"><div class="card"><h2>Cosa doveva esserci</h2><div class="check">' + punti + '</div></div>' +
+      '<div class="card"><h2>Errori tipici su questo tema</h2><ul class="plain">' + c.errori.map(e => '<li>' + esc(e) + '</li>').join('') + '</ul></div></div></section>' +
+      '<section class="card"><h2>Il tuo testo</h2><div class="essay-read" lang="en">' + esc(W.text) + '</div><details><summary class="muted" style="cursor:pointer">Rileggi dossier e consegna</summary><div class="brief" lang="en" style="margin-top:10px">' + esc(c.brief) + '</div><div class="task" lang="en" style="margin-top:10px"><b>Assignment.</b> ' + esc(c.task) + '</div></details></section>' +
+      '<div class="row"><button class="btn primary" data-act="salvaW">Salva e chiudi</button><button class="btn ghost" data-act="buttaW">Chiudi senza salvare</button></div></div>';
+  }
+  function votoAuto() {
+    if (!SCR.griglia.length || SCR.griglia.some((k, i) => W.auto[i] == null)) return null;
+    return Math.round(SCR.griglia.reduce((s, k, i) => s + W.auto[i] / 3 * k.peso, 0) * 2) / 2;
+  }
+  function esitoHtml(r) {
+    const crit = (r.criteri || []).map(k => '<div class="crit"><div class="crit-h">' + esc(k.nome) + '<span>' + String(k.voto).replace('.', ',') + ' / ' + k.su + '</span></div>' +
+      '<div class="bar"><i class="' + colore(k.voto / k.su) + '" style="width:' + Math.round(k.voto / k.su * 100) + '%"></i></div><p>' + esc(k.commento || '') + '</p></div>').join('');
+    const lista = (t, a) => (a && a.length ? '<div><h3>' + t + '</h3><ul class="plain">' + a.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></div>' : '');
+    const ris = r.riscrittura && r.riscrittura.originale ? '<div><h3>Una frase riscritta</h3><p class="muted" lang="en">' + esc(r.riscrittura.originale) + '</p><p lang="en"><b>' + esc(r.riscrittura.migliore || '') + '</b></p></div>' : '';
+    return '<div class="verdict ' + (r.totale >= 5 ? 'good' : 'bad') + '"><h2 class="num">' + String(r.totale).replace('.', ',') + ' su 10</h2><p>' + (r.totale >= 5 ? 'Sopra la soglia di 5.' : 'Sotto la soglia di 5.') + ' ' + esc(r.sintesi || '') + '</p></div>' +
+      '<div>' + crit + '</div><div class="grid2">' + lista('Cosa funziona', r.forti) + lista('Cosa cambiare', r.migliora) + '</div>' + ris + lista('Inglese da sistemare', r.lingua);
+  }
+  let ctlValuta = null;
+  const ERR_SAMPLE = { not_granted: 'Non hai dato il permesso a Claude: resta disponibile l\'autovalutazione.', rate_limited: 'Hai raggiunto un limite d\'uso di Claude. Riprova più tardi.', session_expired: 'La sessione è scaduta: accedi di nuovo a Claude e riprova.', refused: 'Claude non ha valutato questo testo. Cambialo e riprova.', invalid_json: 'La risposta non era leggibile. Riprova.', sampling_disabled: 'Claude non è disponibile per questo account.' };
+  function promptValuta() {
+    const c = W.caso;
+    return 'Sei un correttore esperto della prova scritta dei concorsi EPSO per amministratori (AD5), il "free-text essay on EU matters". ' +
+      'La prova valuta SOLO la comunicazione scritta: non è un test di lingua né di conoscenza dei fatti. Il candidato ha 40 minuti e deve scrivere circa 300 parole in inglese a partire da un dossier.\n\n' +
+      'Valuta il testo sui cinque criteri ufficiali, ciascuno da 0 a 2 con mezzi punti ammessi:\n' +
+      SCR.griglia.map((k, i) => (i + 1) + '. ' + k.nome + '. Livelli da 0 a 2: ' + k.livelli.join(' | ')).join('\n') +
+      '\n\nSii severo come un correttore vero: 5 su 10 è la soglia per passare, 7 è un buon testo, 9 è raro. Un testo che non risponde alla consegna, o molto più corto o più lungo del richiesto, perde punti nei criteri che tocca. Gli errori di inglese contano solo se ostacolano la chiarezza.\n\n' +
+      'DOSSIER:\n' + c.brief + '\n\nCONSEGNA:\n' + c.task + '\n\nPUNTI CHE UNA BUONA RISPOSTA TOCCA:\n- ' + c.punti.join('\n- ') +
+      '\n\nTESTO DEL CANDIDATO (' + parole(W.text) + ' parole, scritto in ' + Math.round(W.sec / 60) + ' minuti):\n"""\n' + W.text.slice(0, 9000) + '\n"""\n\n' +
+      'Rispondi SOLO con un oggetto JSON, senza altro testo, in questa forma:\n' +
+      '{"criteri":[{"nome":"Struttura e flusso logico","voto":1.5,"commento":"una o due frasi in italiano, con un esempio preso dal testo"}],"sintesi":"una frase in italiano sul testo nel complesso","forti":["fino a tre punti di forza, in italiano"],"migliora":["fino a tre cose concrete da cambiare, in italiano"],"riscrittura":{"originale":"una frase debole del candidato, copiata","migliore":"la stessa frase riscritta meglio, in inglese"},"lingua":["fino a tre errori di inglese che ostacolano la chiarezza, ciascuno con la correzione; lista vuota se non ce ne sono"]}\n' +
+      'I criteri devono essere cinque, nell\'ordine dato, con i nomi dati.';
+  }
+  function leggiEsito(o) {
+    if (!o || !Array.isArray(o.criteri)) return null;
+    const criteri = SCR.griglia.map((k, i) => {
+      const x = o.criteri[i] || {}; let v = Number(x.voto); if (!isFinite(v)) v = 0;
+      v = Math.max(0, Math.min(k.peso, Math.round(v * 2) / 2));
+      return { nome: k.nome, voto: v, su: k.peso, commento: String(x.commento || '').slice(0, 600) };
+    });
+    const arr = a => (Array.isArray(a) ? a.slice(0, 3).map(x => String(x).slice(0, 400)) : []);
+    return { criteri, totale: criteri.reduce((s, k) => s + k.voto, 0), sintesi: String(o.sintesi || '').slice(0, 400), forti: arr(o.forti), migliora: arr(o.migliora), lingua: arr(o.lingua),
+      riscrittura: o.riscrittura && typeof o.riscrittura === 'object' ? { originale: String(o.riscrittura.originale || '').slice(0, 400), migliore: String(o.riscrittura.migliore || '').slice(0, 400) } : null };
+  }
+  async function valuta() {
+    if (!SAMPLE || !W || W.stato === 'attesa') return;
+    W.res = null; W.stato = 'attesa'; renderScritta();
+    ctlValuta = new AbortController();
+    const qui = W;
+    try {
+      const o = await SAMPLE.json(promptValuta(), { cache: false, signal: ctlValuta.signal });
+      if (W !== qui) return;
+      const r = leggiEsito(o);
+      if (r) { W.res = r; W.stato = ''; } else W.stato = ERR_SAMPLE.invalid_json;
+    } catch (e) {
+      if (W !== qui) return;
+      W.stato = e && e.code === 'cancelled' ? '' : (ERR_SAMPLE[e && e.code] || 'La valutazione si è interrotta. Riprova.');
+    }
+    if (W === qui && W.phase === 'v') renderScritta();
+  }
+  function salvaW() {
+    const sg = store.get('saggi', []), a = votoAuto();
+    sg.push({ t: new Date().toISOString(), caso: W.caso.id, parole: parole(W.text), sec: W.sec, auto: a, claude: W.res ? W.res.totale : null, det: W.res || null, testo: W.text.slice(0, 6000) });
+    store.set('saggi', sg.slice(-20));
+    W = null; view = 'scritta'; render(); window.scrollTo(0, 0);
+  }
+
+  // ---------- salvataggio sull'account ----------
+  // I risultati vivono nel browser e, quando la pagina gira dentro Claude, anche in un documento
+  // privato dell'utente: cosi' si ritrovano su ogni dispositivo.
+  const SYNC_KEYS = ['storico', 'q2', 'aree', 'saggi', 'impost2'];
+  let DBDOC = null, pushT = null, pushing = false, sporco = false, syncState = 'locale';
+  function testoSync() {
+    return syncState === 'account' ? 'Risultati salvati sul tuo account Claude: li ritrovi su ogni dispositivo.'
+      : syncState === 'errore' ? 'Non riesco a salvare sul tuo account in questo momento: i risultati restano in questo browser.'
+      : 'Risultati salvati in questo browser.';
+  }
+  function statoLocale() { const o = {}; SYNC_KEYS.forEach(k => { const v = store.get(k, null); if (v != null) o[k] = v; }); return o; }
+  function unisci(loc, rem) {
+    const out = {}, perT = (a, b, cap) => { const m = {}; (a || []).concat(b || []).forEach(x => { if (x && x.t) m[x.t] = x; }); return Object.keys(m).sort().map(k => m[k]).slice(-cap); };
+    out.storico = perT(loc.storico, rem.storico, 200);
+    out.saggi = perT(loc.saggi, rem.saggi, 20);
+    const maxMap = (a, b, idx) => { const m = Object.assign({}, a || {}); Object.keys(b || {}).forEach(k => { if (!m[k] || (b[k][idx] || 0) > (m[k][idx] || 0)) m[k] = b[k]; }); return m; };
+    out.q2 = maxMap(loc.q2, rem.q2, 0);
+    out.aree = maxMap(loc.aree, rem.aree, 1);
+    const li = loc.impost2 || {}, ri = rem.impost2 || {};
+    out.impost2 = (ri.t || '') > (li.t || '') ? ri : li;
+    return out;
+  }
+  async function push() {
+    if (!DBDOC) return;
+    if (pushing) { sporco = true; return; }
+    pushing = true; sporco = false;
+    try { await DBDOC.set(Object.assign({ v: 1, t: new Date().toISOString() }, statoLocale())); syncState = 'account'; }
+    catch (e) { syncState = 'errore'; }
+    pushing = false;
+    if (sporco) pushT = setTimeout(push, 1500);
+    const el = document.getElementById('sync-st'); if (el) el.textContent = testoSync();
+  }
+  touch = k => { if (DBDOC && SYNC_KEYS.includes(k)) { clearTimeout(pushT); pushT = setTimeout(push, 1500); } };
+  async function avviaAccount() {
+    const cl = window.claude;
+    if (!cl || typeof cl.use !== 'function') return;
+    cl.use('sample').then(s => { SAMPLE = s || null; if (W && W.phase === 'v') renderScritta(); }).catch(() => {});
+    try {
+      const pair = await Promise.all([cl.use('db'), cl.use('user')]);
+      const db = pair[0], user = pair[1];
+      if (!db || !user) return;
+      const uid = await user.id();
+      if (!uid) return;
+      const doc = db.doc('data/users/' + uid + '/palestra');
+      const snap = await doc.get();
+      const rem = snap.exists ? JSON.parse(JSON.stringify(snap.data())) : null;
+      const prima = JSON.stringify(statoLocale());
+      if (rem) { const m = unisci(statoLocale(), rem); SYNC_KEYS.forEach(k => { localSet(k, m[k]); }); }
+      DBDOC = doc; syncState = 'account';
+      const dopo = statoLocale();
+      const remConf = rem ? JSON.stringify(SYNC_KEYS.reduce((o, k) => { if (rem[k] != null) o[k] = rem[k]; return o; }, {})) : '';
+      if (JSON.stringify(dopo) !== remConf && Object.keys(dopo).some(k => (Array.isArray(dopo[k]) ? dopo[k].length : Object.keys(dopo[k] || {}).length))) push();
+      if (!EX && !W) { if (JSON.stringify(dopo) !== prima) render(); else { const el = document.getElementById('sync-st'); if (el) el.textContent = testoSync(); } }
+    } catch (e) { /* senza account si lavora nel browser */ }
+  }
+  function areeRisultato(done) {
+    const per = {};
+    done.forEach(x => { if (!isP2(x.key)) return; x.items.forEach((it, i) => { const k = x.key + ':' + it.area; const a = per[k] || (per[k] = { nome: it.tema, ok: 0, n: 0 }); a.n++; if (x.ans[i] === it.correct) a.ok++; }); });
+    const l = Object.keys(per).map(k => per[k]).sort((a, b) => a.ok / a.n - b.ok / b.n);
+    if (l.length < 2) return '';
+    return '<section class="card"><h2>Per argomento</h2><div>' + l.map(a => '<div class="area-row"><div><b>' + esc(a.nome) + '</b></div><div class="bar"><i class="' + colore(a.ok / a.n) + '" style="width:' + Math.round(a.ok / a.n * 100) + '%"></i></div><div class="pc">' + a.ok + '/' + a.n + '</div><span></span></div>').join('') + '</div></section>';
+  }
+
+  // ---------- eventi ----------
+  const ACT = {
+    tab: d => { EX = null; if (W && W.timer) clearInterval(W.timer); W = null; view = d.v; store.set('tab', view); render(); window.scrollTo(0, 0); },
+    home: () => { const p2 = EX && isP2(EX.keys[0]); EX = null; view = p2 ? 'fase2' : 'oggi'; render(); window.scrollTo(0, 0); },
+    start: d => startExam(d.mode, d.sec || null, d.f),
+    scrivi: d => apriScritta(d.caso, d.riprendi === '1'),
+    consegnaW: () => {
+      const ta = document.getElementById('saggio'), n = parole(ta.value);
+      if (n < 40 && !W.conf) { W.conf = true; document.getElementById('w-azioni').insertAdjacentHTML('beforebegin', '<p class="note">Hai scritto ' + n + ' parole. Premi di nuovo «Consegna» per consegnare comunque.</p>'); return; }
+      consegnaW();
+    },
+    lasciaW: () => { clearInterval(W.timer); store.set('bozza', { caso: W.caso.id, text: document.getElementById('saggio').value, sec: Math.round(secW()) }); W = null; view = 'scritta'; render(); window.scrollTo(0, 0); },
+    buttaBozza: () => { store.set('bozza', null); render(); },
+    valuta: () => { valuta(); },
+    fermaValuta: () => { if (ctlValuta) ctlValuta.abort(); },
+    salvaW: () => salvaW(),
+    buttaW: () => { W = null; view = 'scritta'; render(); window.scrollTo(0, 0); },
+    opt: d => choose(Number(d.i)),
+    go: d => go(Number(d.q)),
+    prev: () => go(EX.sec.q - 1),
+    next: () => go(EX.sec.q + 1),
+    flag: () => { const s = EX.sec; s.flag[s.q] = !s.flag[s.q]; renderQ(); },
+    reveal: () => { const s = EX.sec; if (s.ans[s.q] == null) return; s.rev[s.q] = true; renderQ(); },
+    finish: askFinish,
+    finishNo: () => renderSide(),
+    finishYes: () => endSection(false),
+    quit: askQuit,
+    quitYes: () => { stopTimer(); EX = null; render(); window.scrollTo(0, 0); },
+    nextSection: () => openSection(),
+    panel: (d, b) => {
+      const p = document.getElementById('p-' + d.p), open = p.hidden;
+      p.hidden = !open;
+      document.querySelectorAll('.tool[data-p="' + d.p + '"]').forEach(t => t.setAttribute('aria-expanded', String(open)));
+      if (open) (p.querySelector('input, textarea') || p).focus();
+    },
+    ck: d => calc(d.k)
+  };
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-act]');
+    if (!b || b.disabled) return;
+    const f = ACT[b.dataset.act];
+    if (f) f(b.dataset, b);
+  });
+  document.addEventListener('change', e => {
+    const c = e.target.closest('[data-chk]');
+    if (c) { const s = store.get('check', {}); s[c.dataset.chk] = c.checked; store.set('check', s); }
+    const im = e.target.closest('[data-imp]');
+    if (im) {
+      const s = store.get('impost2', {}); let v = im.value;
+      if (im.dataset.imp === 'verbale1' && v !== '') v = Math.max(0, Math.min(20, Math.round(Number(v) || 0)));
+      s[im.dataset.imp] = v; s.t = new Date().toISOString(); store.set('impost2', s); render();
+    }
+    const au = e.target.closest('[data-auto]');
+    if (au && W) { W.auto[Number(au.dataset.auto)] = Number(au.value); renderScritta(); }
+    const pt = e.target.closest('[data-punto]');
+    if (pt && W) W.punti[Number(pt.dataset.punto)] = pt.checked;
+  });
+  document.addEventListener('input', e => {
+    const t = e.target.closest('[data-story]');
+    if (t) { const s = store.get('storie', {}); s[t.dataset.story] = t.value; store.set('storie', s); }
+  });
+  document.addEventListener('keydown', e => {
+    if (!EX || EX.phase !== 'q') return;
+    const tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || e.metaKey || e.ctrlKey || e.altKey) return;
+    const k = e.key.toLowerCase();
+    let i = 'abcde'.indexOf(k); if (i < 0) i = '12345'.indexOf(k);
+    if (k.length === 1 && i >= 0 && i < EX.sec.items[EX.sec.q].opts.length) { choose(i); e.preventDefault(); }
+    else if (e.key === 'ArrowRight') { go(EX.sec.q + 1); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft') { go(EX.sec.q - 1); e.preventDefault(); }
+  });
+
+  render();
+  avviaAccount();
+})();
+</script>
+</body>
+</html>
